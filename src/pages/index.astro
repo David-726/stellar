@@ -13,7 +13,14 @@ const fmt = (d: Date) =>
 
 <Base>
   <div class="intro-section">
-    <p>{SITE.bio}</p>
+    <img class="hero" src="/assets/images/hero.webp" alt="hero" width="1320" height="743" />
+    <div class="bio-row">
+      <img class="avatar" src="/assets/images/avatar.gif" alt={SITE.author} width="56" height="56" />
+      <div>
+        <p class="bio-name">{SITE.author}</p>
+        <p class="bio-text">{SITE.bio}</p>
+      </div>
+    </div>
     <nav>
       {
         SITE.links.map((link) => (
@@ -26,10 +33,10 @@ const fmt = (d: Date) =>
   </div>
 
   <div class="post-list">
-    <h2 style="margin-top:0">Posts</h2>
+    <h2 class="section-label">Posts</h2>
     {
-      posts.map((post) => (
-        <div class="post-item">
+      posts.map((post, i) => (
+        <div class="post-item" style={`animation-delay:${0.08 * i + 0.15}s`}>
           <p class="post-item-title">
             <a href={`/posts/${post.id}/`}>{post.data.title}</a>
           </p>

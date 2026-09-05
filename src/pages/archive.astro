@@ -18,20 +18,18 @@ const years = [...byYear.keys()].sort((a, b) => b - a);
 
 <Base title="归档">
   <div class="post-list">
-    <h1 style="margin-top:0">归档</h1>
+    <h2 class="section-label" style="margin-top:0">Archive</h2>
     {
       years.map((y) => (
         <section>
-          <h2>{y}</h2>
-          <ul style="list-style:none;padding:0">
+          <h3 class="archive-year">{y}</h3>
+          <ul class="archive-list">
             {byYear.get(y)!.map((post) => (
-              <li style="margin-bottom:0.8em">
-                <span style="font-family:var(--font-ui);font-size:0.78em;color:var(--core-gray);margin-right:12px">
+              <li>
+                <span class="archive-date">
                   {post.data.published.toISOString().slice(0, 10)}
                 </span>
-                <a href={`/posts/${post.id}/`} style="color:var(--core-black)">
-                  {post.data.title}
-                </a>
+                <a href={`/posts/${post.id}/`}>{post.data.title}</a>
               </li>
             ))}
           </ul>

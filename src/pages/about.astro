@@ -4,18 +4,23 @@ import { SITE } from "../consts";
 ---
 
 <Base title="关于">
-  <div class="intro-section">
-    <h1 style="margin-top:0">关于</h1>
-    <p>{SITE.bio}</p>
-    <p>这里是 {SITE.title}，记录深度学习、FPGA 与日常思考。</p>
-    <nav>
-      {
-        SITE.links.map((link) => (
-          <a href={link.url} target={link.url.startsWith("http") ? "_blank" : undefined}>
-            {link.name}
-          </a>
-        ))
-      }
-    </nav>
+  <div class="about-page">
+    <div class="about-card">
+      <img class="about-avatar" src="/assets/images/avatar.gif" alt={SITE.author} width="88" height="88" />
+      <h1 style="margin-top:0.6em">{SITE.author}</h1>
+      <p class="about-bio">{SITE.bio}</p>
+      <hr />
+      <p>这里是 {SITE.title}，记录深度学习、FPGA 与日常思考。</p>
+      <p class="about-links-label">找到我</p>
+      <nav>
+        {
+          SITE.links.map((link) => (
+            <a href={link.url} target={link.url.startsWith("http") ? "_blank" : undefined}>
+              {link.name}
+            </a>
+          ))
+        }
+      </nav>
+    </div>
   </div>
 </Base>
