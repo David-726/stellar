@@ -1,0 +1,35 @@
+---
+import { getCollection, render } from "astro:content";
+import Base from "../../layouts/Base.astro";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog", ({ data }) => !data.draft);
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+
+const fmt = (d: Date) =>
+  d.toLocaleDateString("zh-CN", { year: "numeric", month: "long", day: "numeric" });
+---
+
+<Base title={post.data.title} description={post.data.description}>
+  <article>
+    <header class="article-header">
+      <ul class="article-metadata">
+        <li><time>{fmt(post.data.published)}</time></li>
+        {post.data.tags.length > 0 && <li>{post.data.tags.join(", ")}</li>}
+      </ul>
+      <h1>{post.data.title}</h1>
+    </header>
+    <Content />
+  </article>
+  <div class="post-nav">
+    <a href="/">← 首页</a>
+    <a href="/archive/">归档 →</a>
+  </div>
+</Base>

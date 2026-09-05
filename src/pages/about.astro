@@ -1,0 +1,21 @@
+---
+import Base from "../layouts/Base.astro";
+import { SITE } from "../consts";
+---
+
+<Base title="关于">
+  <div class="intro-section">
+    <h1 style="margin-top:0">关于</h1>
+    <p>{SITE.bio}</p>
+    <p>这里是 {SITE.title}，记录深度学习、FPGA 与日常思考。</p>
+    <nav>
+      {
+        SITE.links.map((link) => (
+          <a href={link.url} target={link.url.startsWith("http") ? "_blank" : undefined}>
+            {link.name}
+          </a>
+        ))
+      }
+    </nav>
+  </div>
+</Base>

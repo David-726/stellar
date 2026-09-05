@@ -1,0 +1,44 @@
+---
+import { getCollection } from "astro:content";
+import Base from "../layouts/Base.astro";
+import { SITE } from "../consts";
+
+const posts = (await getCollection("blog", ({ data }) => !data.draft)).sort(
+  (a, b) => b.data.published.valueOf() - a.data.published.valueOf(),
+);
+
+const fmt = (d: Date) =>
+  d.toLocaleDateString("zh-CN", { year: "numeric", month: "long", day: "numeric" });
+---
+
+<Base>
+  <div class="intro-section">
+    <p>{SITE.bio}</p>
+    <nav>
+      {
+        SITE.links.map((link) => (
+          <a href={link.url} target={link.url.startsWith("http") ? "_blank" : undefined}>
+            {link.name}
+          </a>
+        ))
+      }
+    </nav>
+  </div>
+
+  <div class="post-list">
+    <h2 style="margin-top:0">Posts</h2>
+    {
+      posts.map((post) => (
+        <div class="post-item">
+          <p class="post-item-title">
+            <a href={`/posts/${post.id}/`}>{post.data.title}</a>
+          </p>
+          <p class="post-item-meta">
+            <time>{fmt(post.data.published)}</time>
+            {post.data.tags.length > 0 && <span> · {post.data.tags.join(", ")}</span>}
+          </p>
+        </div>
+      ))
+    }
+  </div>
+</Base>
