@@ -28,6 +28,7 @@
   },
   "devDependencies": {
     "@esbuild/win32-x64": "0.27.7",
-    "@img/sharp-win32-x64": "0.34.5"
+    "@img/sharp-win32-x64": "0.34.5",
+    "wrangler": "^4.129.0"
   }
 }

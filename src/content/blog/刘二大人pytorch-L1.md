@@ -1,0 +1,75 @@
+---
+title: "L1"
+published: 2026-04-15
+description: ""
+tags: ["刘二大人pytorch"]
+draft: false
+---
+## Part1 
+### 算法
+- 穷举
+- 贪心
+- 分支
+- 动态规划
+
+### DataSets
+ Machine Learning 在Datasets中找到我们想要的算法
+### Deeplearning
+<img src="/posts/assets/19r5ayx-Pasted-image-20260415223219.png" alt="Pasted image 20260415223219.png" loading="lazy" />
+
+>跟面积无关
+
+### How to develop learning system
+最开始有一个人工智能程序用于求解fx的原函数
+$F(x) = \int f(x) \, dx$也就是所说的 rule-based system
+
+因为对于一些特定的fx的原函数 有一定的规则,例如
+$\int f(x)+g(x)\,dx=\int f(x)\,dx+\int g(x)\,dx$
+Drawing 2026-04-15 22.36.16.excalidraw
+>基于规则的程序也属于人工智能程序
+
+**rule-based systems 中最重要的是图中的Hand-designde porgram
+但是由于人类的疏忽 很多时候会把某些规则给漏掉
+因为到最后基于规则的程序的规则会越来越复杂 越来越庞大 最终成为人类无法维护的程序**
+>早期
+
+**classic machine learning 采用手工特征筛选 我们要将features映射为一个vector或者tensor 从而output是关于这个tensor的**
+
+#### 为什么要特征提取
+**维度的诅咒：
+features的数量越多 也就是说维度越高对于数据的需求越大
+但是收集数据的工作量巨大**
+>大数定律
+
+**例如将10维空间压缩为3维 那么需要做一些线性或是非线性的映射**
+**也就是present learning 或是说降维**
+>Manifold 流行
+
+**Deeplearning和presentationlearning的区别:原来的特征提取器和学习器是分开的 而DL则不是**
+### Rule-based systemVS Representation system
+**Rule-based system就是基于rule Rs则是Training from data**
+<img src="/posts/assets/1sonbys-Pasted-image-20260415232203.png" alt="Pasted image 20260415232203.png" loading="lazy" />
+
+
+- limit of hand-designed features
+- SVM cannot handle big data set well
+- More appilication need to handle unstructured data
+
+### Back Porpagation
+将每一层的偏导数存下来 
+**计算图**
+Drawing 2026-04-16 12.34.28.excalidraw
+$e=(a+b)*(c+d)$ 链式法则
+>原子计算
+
+**LeNet**
+>最早用于识别手写邮政编码
+Tensorflow TFboys
+MxNet Caffe(UC Berkeley)
+
+>最早的TF StaticGraph 效率不高
+>Pytorch 最早主打Dynamic Graph
+
+- More flexible
+- Easy to debug
+- Intutive and cleaner code
