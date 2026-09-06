@@ -2,7 +2,7 @@
 title: "L3"
 published: 2026-04-17
 description: ""
-tags: ["刘二大人pytorch"]
+tags: ["PyTorch"]
 draft: false
 ---
 last lecture :Linear model

@@ -2,7 +2,7 @@
 title: "torch.no_grad() VS requires_grad=False"
 published: 2026-09-02
 description: ""
-tags: ["BERT"]
+tags: ["BERT", "PyTorch"]
 draft: false
 ---
 - `torch.no_grad()`

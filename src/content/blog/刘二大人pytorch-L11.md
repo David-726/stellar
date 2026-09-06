@@ -2,7 +2,7 @@
 title: "L11"
 published: 2026-05-01
 description: ""
-tags: ["刘二大人pytorch"]
+tags: ["PyTorch"]
 draft: false
 ---
 # Advanced CNN

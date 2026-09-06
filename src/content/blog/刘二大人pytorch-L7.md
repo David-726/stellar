@@ -2,7 +2,7 @@
 title: "L7"
 published: 2026-04-25
 description: ""
-tags: ["刘二大人pytorch"]
+tags: ["PyTorch"]
 draft: false
 ---
 # 处理多维特征的输入

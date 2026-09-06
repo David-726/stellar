@@ -2,7 +2,7 @@
 title: "FCN"
 published: 2026-05-24
 description: ""
-tags: ["D2lNotes"]
+tags: ["语义分割"]
 draft: false
 ---
 # Fully Conneted Network

@@ -2,7 +2,7 @@
 title: "L1"
 published: 2026-04-15
 description: ""
-tags: ["刘二大人pytorch"]
+tags: ["PyTorch"]
 draft: false
 ---
 ## Part1 

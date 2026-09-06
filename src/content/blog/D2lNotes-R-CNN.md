@@ -2,7 +2,7 @@
 title: "R-CNN"
 published: 2026-05-23
 description: ""
-tags: ["D2lNotes"]
+tags: ["CNN", "目标检测"]
 draft: false
 ---
 ## R-CNN

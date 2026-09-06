@@ -2,7 +2,7 @@
 title: "模型选择"
 published: 2026-06-06
 description: ""
-tags: ["D2lNotes"]
+tags: ["正则化"]
 draft: false
 ---
 如何实现泛化的能力是学习的根本目的

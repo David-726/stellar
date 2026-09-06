@@ -2,7 +2,7 @@
 title: "L10"
 published: 2026-04-27
 description: ""
-tags: ["刘二大人pytorch"]
+tags: ["PyTorch"]
 draft: false
 ---
 # Basic CNN

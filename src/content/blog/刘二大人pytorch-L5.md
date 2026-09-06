@@ -2,7 +2,7 @@
 title: "L5"
 published: 2026-04-18
 description: ""
-tags: ["刘二大人pytorch"]
+tags: ["PyTorch"]
 draft: false
 ---
 # Pytorch 高级api实现Linear Model

@@ -2,7 +2,7 @@
 title: "L6"
 published: 2026-04-21
 description: ""
-tags: ["刘二大人pytorch"]
+tags: ["PyTorch"]
 draft: false
 ---
 # Logistic Regression

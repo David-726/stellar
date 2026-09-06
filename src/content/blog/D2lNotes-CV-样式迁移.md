@@ -2,7 +2,7 @@
 title: "样式迁移"
 published: 2026-05-24
 description: ""
-tags: ["D2lNotes"]
+tags: ["语义分割"]
 draft: false
 ---
 # 样式迁移

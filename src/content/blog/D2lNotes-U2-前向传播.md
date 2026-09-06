@@ -2,7 +2,7 @@
 title: "前向传播"
 published: 2026-06-07
 description: ""
-tags: ["D2lNotes"]
+tags: ["多层感知机"]
 draft: false
 ---
 

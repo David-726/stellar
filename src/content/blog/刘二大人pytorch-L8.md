@@ -2,7 +2,7 @@
 title: "L8"
 published: 2026-04-26
 description: ""
-tags: ["刘二大人pytorch"]
+tags: ["PyTorch"]
 draft: false
 ---
 # Dataset and DataLoader

@@ -2,7 +2,7 @@
 title: "Verilog 环境搭建"
 published: 2026-08-07
 description: ""
-tags: ["Verilog"]
+tags: ["Verilog", "环境搭建"]
 draft: false
 ---
 # Verilog 语句块

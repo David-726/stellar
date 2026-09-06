@@ -1,160 +1,166 @@
 [astro] `markdown.remarkPlugins`, `markdown.rehypePlugins`, and `markdown.remarkRehype` are deprecated. Pass them to `unified({...})` from `@astrojs/markdown-remark` directly instead.
-[2m22:24:56[22m [34m[vite][39m Re-optimizing dependencies because vite config has changed
-[2m22:24:57[22m [34m[content][39m Syncing content
-[2m22:24:57[22m [34m[content][39m Synced content
-[2m22:24:57[22m [34m[types][39m Generated [2m635ms[22m
-[2m22:24:57[22m [34m[build][39m output: [34m"static"[39m
-[2m22:24:57[22m [34m[build][39m mode: [34m"static"[39m
-[2m22:24:57[22m [34m[build][39m directory: [34mD:\blog\stellar\dist\[39m
-[2m22:24:57[22m [34m[build][39m Collecting build info...
-[2m22:24:57[22m [34m[build][39m [32m✓ Completed in 659ms.[39m
-[2m22:24:57[22m [34m[build][39m Building static entrypoints...
-[33m[1m22:24:58[22m [WARN] [vite][39m [33mnode_modules/.pnpm/zod@4.5.4/node_modules/zod/v4/core/regexes.js (70:0): A comment
+[2m22:46:49[22m [34m[content][39m Syncing content
+[2m22:46:49[22m [34m[content][39m Synced content
+[2m22:46:49[22m [34m[types][39m Generated [2m486ms[22m
+[2m22:46:49[22m [34m[build][39m output: [34m"static"[39m
+[2m22:46:49[22m [34m[build][39m mode: [34m"static"[39m
+[2m22:46:49[22m [34m[build][39m directory: [34mD:\blog\stellar\dist\[39m
+[2m22:46:49[22m [34m[build][39m Collecting build info...
+[2m22:46:49[22m [34m[build][39m [32m✓ Completed in 509ms.[39m
+[2m22:46:49[22m [34m[build][39m Building static entrypoints...
+[33m[1m22:46:49[22m [WARN] [vite][39m [33mnode_modules/.pnpm/zod@4.5.4/node_modules/zod/v4/core/util.js (330:0): A comment
+
+"// Wrapped in a `@__PURE__` IIFE: esbuild never tree-shakes a top-level initializer that contains a member access on `Number`, so the bare object literal survived into every bundle."
+
+in "node_modules/.pnpm/zod@4.5.4/node_modules/zod/v4/core/util.js" contains an annotation that Rollup cannot interpret due to the position of the comment. The comment will be removed to avoid issues.[39m
+[33m[1m22:46:49[22m [WARN] [vite][39m [33mnode_modules/.pnpm/zod@4.5.4/node_modules/zod/v4/core/regexes.js (70:0): A comment
 
 "/** Anchors a pattern source. The interpolation lives here rather than at the call site because
  * esbuild will not drop a `@__PURE__` call whose own argument interpolates a variable, but it
  * will drop `anchor(dateSource)`. Keeping it inline pinned `date` into every bundle. */"
 
 in "node_modules/.pnpm/zod@4.5.4/node_modules/zod/v4/core/regexes.js" contains an annotation that Rollup cannot interpret due to the position of the comment. The comment will be removed to avoid issues.[39m
-[33m[1m22:24:58[22m [WARN] [vite][39m [33mnode_modules/.pnpm/zod@4.5.4/node_modules/zod/v4/core/util.js (330:0): A comment
-
-"// Wrapped in a `@__PURE__` IIFE: esbuild never tree-shakes a top-level initializer that contains a member access on `Number`, so the bare object literal survived into every bundle."
-
-in "node_modules/.pnpm/zod@4.5.4/node_modules/zod/v4/core/util.js" contains an annotation that Rollup cannot interpret due to the position of the comment. The comment will be removed to avoid issues.[39m
-[2m22:24:59[22m [34m[vite][39m [32m✓ built in 1.50s[39m
-[2m22:24:59[22m [34m[vite][39m [32m✓ built in 77ms[39m
-[2m22:24:59[22m [34m[build][39m Rearranging server assets...
+[2m22:46:50[22m [34m[vite][39m [32m✓ built in 1.31s[39m
+[2m22:46:50[22m [34m[vite][39m [32m✓ built in 52ms[39m
+[2m22:46:50[22m [34m[build][39m Rearranging server assets...
 
 [42m[30m generating static routes [39m[49m
-[2m22:24:59[22m   [34m├─[39m [2m/404.html[22m [2m(+7ms)[22m 
-[2m22:24:59[22m   [34m├─[39m [2m/about/index.html[22m [2m(+2ms)[22m 
-[2m22:24:59[22m   [34m├─[39m [2m/archive/index.html[22m [2m(+4ms)[22m 
-[2m22:24:59[22m   [34m├─[39m [2m/posts/刘二大人pytorch-l1/index.html[22m [2m(+3ms)[22m 
-[2m22:24:59[22m   [34m├─[39m [2m/posts/刘二大人pytorch-l10/index.html[22m [2m(+2ms)[22m 
-[2m22:24:59[22m   [34m├─[39m [2m/posts/刘二大人pytorch-l11/index.html[22m [2m(+2ms)[22m 
-[2m22:24:59[22m   [34m├─[39m [2m/posts/刘二大人pytorch-l12/index.html[22m [2m(+2ms)[22m 
-[2m22:24:59[22m   [34m├─[39m [2m/posts/刘二大人pytorch-l2/index.html[22m [2m(+2ms)[22m 
-[2m22:24:59[22m   [34m├─[39m [2m/posts/刘二大人pytorch-l3/index.html[22m [2m(+2ms)[22m 
-[2m22:24:59[22m   [34m├─[39m [2m/posts/刘二大人pytorch-l4/index.html[22m [2m(+3ms)[22m 
-[2m22:24:59[22m   [34m├─[39m [2m/posts/刘二大人pytorch-l5/index.html[22m [2m(+3ms)[22m 
-[2m22:24:59[22m   [34m├─[39m [2m/posts/刘二大人pytorch-l6/index.html[22m [2m(+2ms)[22m 
-[2m22:24:59[22m   [34m├─[39m [2m/posts/刘二大人pytorch-l7/index.html[22m [2m(+2ms)[22m 
-[2m22:24:59[22m   [34m├─[39m [2m/posts/刘二大人pytorch-l8/index.html[22m [2m(+2ms)[22m 
-[2m22:24:59[22m   [34m├─[39m [2m/posts/刘二大人pytorch-l9/index.html[22m [2m(+3ms)[22m 
-[2m22:24:59[22m   [34m├─[39m [2m/posts/bert-解析bertmodel的outputlast_hidden_statepooler_outputhidden_state/index.html[22m [2m(+3ms)[22m 
-[2m22:24:59[22m   [34m├─[39m [2m/posts/bert-bert-embeddingword-embeddingpooler-embedding/index.html[22m [2m(+3ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/bert-bert-model-architecture-模型架构初探/index.html[22m [2m(+3ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/bert-bertencoder-self-attention-计算细节及计算过程/index.html[22m [2m(+2ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/bert-berttokenizer-subwordwordpiece-如何处理数字等长尾单词/index.html[22m [2m(+2ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/bert-hugging-face-tokenizer/index.html[22m [2m(+2ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/bert-tokenizer_encoder_plus_token_type_ids/index.html[22m [2m(+3ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/bert-torchno_grad-vs-requires_gradfalse/index.html[22m [2m(+6ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/d2l-21-数据操作/index.html[22m [2m(+3ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/d2l-前言_1_install/index.html[22m [2m(+3ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/d2l-u3-31-线性回归--动手学深度学习-200-documentation/index.html[22m [2m(+4ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/d2l-u3-31-linear-regression/index.html[22m [2m(+3ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/d2l-u3-32-线性回归的从零开始实现/index.html[22m [2m(+2ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/d2l-u3-33-线性回归的简洁实现/index.html[22m [2m(+2ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/d2l-u4-41-多层感知机/index.html[22m [2m(+2ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/d2l-u4-48-数值稳定性和模型初始化--动手学深度学习-200-documentation/index.html[22m [2m(+2ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/d2lnotes-attention-is-all-u-need/index.html[22m [2m(+3ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/d2lnotes-cnn-多输入多输出通道/index.html[22m [2m(+1ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/d2lnotes-cnn-汇聚层/index.html[22m [2m(+2ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/d2lnotes-cnn-卷积/index.html[22m [2m(+2ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/d2lnotes-cnn-填充/index.html[22m [2m(+2ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/d2lnotes-cnn-图像卷积/index.html[22m [2m(+2ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/d2lnotes-cnn-alexnet/index.html[22m [2m(+2ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/d2lnotes-cnn-batch-normalization/index.html[22m [2m(+2ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/d2lnotes-cnn-densenet/index.html[22m [2m(+2ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/d2lnotes-cnn-googlenet/index.html[22m [2m(+2ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/d2lnotes-cnn-lenet/index.html[22m [2m(+4ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/d2lnotes-cnn-nin/index.html[22m [2m(+3ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/d2lnotes-cnn-resnet/index.html[22m [2m(+7ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/d2lnotes-cnn-vgg/index.html[22m [2m(+3ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/d2lnotes-cv-样式迁移/index.html[22m [2m(+3ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/d2lnotes-cv-语义分割/index.html[22m [2m(+3ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/d2lnotes-cv-转置卷积/index.html[22m [2m(+3ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/d2lnotes-cv-fcn/index.html[22m [2m(+2ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/d2lnotes-r-cnn/index.html[22m [2m(+2ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/d2lnotes-rnn-机翻数据集的连续/index.html[22m [2m(+2ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/d2lnotes-rnn-深度循环神经网络/index.html[22m [2m(+2ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/d2lnotes-rnn-双向rnn/index.html[22m [2m(+3ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/d2lnotes-rnn-文本预处理/index.html[22m [2m(+2ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/d2lnotes-rnn-encoder-decoder-架构/index.html[22m [2m(+2ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/d2lnotes-rnn-gru/index.html[22m [2m(+2ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/d2lnotes-rnn-language-model-and-dataset/index.html[22m [2m(+3ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/d2lnotes-rnn-lstm/index.html[22m [2m(+2ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/d2lnotes-rnn-rnn/index.html[22m [2m(+2ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/d2lnotes-rnn-rnn的从0开始实现/index.html[22m [2m(+3ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/d2lnotes-rnn-rnn简洁实现/index.html[22m [2m(+3ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/d2lnotes-rnn-seq-modal/index.html[22m [2m(+3ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/d2lnotes-rnn-seq2seq/index.html[22m [2m(+3ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/d2lnotes-u1-linear-regression/index.html[22m [2m(+3ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/d2lnotes-u1-mnist-的尝试/index.html[22m [2m(+3ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/d2lnotes-u1-softmax/index.html[22m [2m(+3ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/d2lnotes-u2-多层感知机/index.html[22m [2m(+3ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/d2lnotes-u2-还没想好/index.html[22m [2m(+3ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/d2lnotes-u2-模型选择/index.html[22m [2m(+2ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/d2lnotes-u2-前向传播/index.html[22m [2m(+2ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/d2lnotes-u2-权重衰减/index.html[22m [2m(+3ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/d2lnotes-u2-暂退法/index.html[22m [2m(+3ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/d2lnotes-u3-参数管理/index.html[22m [2m(+2ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/d2lnotes-u3-层和块/index.html[22m [2m(+2ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/d2lnotes-u3-读写文件/index.html[22m [2m(+2ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/d2lnotes-u3-延后初始化/index.html[22m [2m(+2ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/d2lnotes-u3-自定义层/index.html[22m [2m(+2ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/d2lnotes-u3-gpu/index.html[22m [2m(+3ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/pytorch-distributed-amp-原理-automatic-mixed-precision-自动混合精度/index.html[22m [2m(+2ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/pytorch-distributed-ddp/index.html[22m [2m(+2ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/pytorch-distributed-ddp-初步应用/index.html[22m [2m(+3ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/pytorch-distributed-deepspeed-基本概念原理/index.html[22m [2m(+3ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/pytorch-distributed-model-parallel-on-resnet50/index.html[22m [2m(+3ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/pytorch-distributed-nccl-集合通信collevtive-communication/index.html[22m [2m(+5ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/pytorch-distributed-nndataparallel/index.html[22m [2m(+3ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/pytorch-distributed-tensor-parallel/index.html[22m [2m(+3ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/pytorch-distributed-torch-processgroup/index.html[22m [2m(+2ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/rust学习-变量绑定与解构/index.html[22m [2m(+2ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/rust学习-函数/index.html[22m [2m(+2ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/rust学习-基本类型/index.html[22m [2m(+4ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/rust学习-数值类型/index.html[22m [2m(+2ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/rust学习-语句与表达式/index.html[22m [2m(+2ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/rust学习-字符-布尔-单元类型/index.html[22m [2m(+2ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/rust学习-hello-world/index.html[22m [2m(+2ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/rust学习-rust环境/index.html[22m [2m(+2ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/verilog-verilog-编译指令/index.html[22m [2m(+2ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/verilog-verilog-表达式/index.html[22m [2m(+3ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/verilog-verilog-并行fir滤波器设计/index.html[22m [2m(+2ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/verilog-verilog-除法器设计/index.html[22m [2m(+2ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/verilog-verilog-串行fir-滤波器设计/index.html[22m [2m(+2ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/verilog-verilog-带参例化/index.html[22m [2m(+2ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/verilog-verilog-的数值表示/index.html[22m [2m(+2ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/verilog-verilog-多路分支语句/index.html[22m [2m(+2ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/verilog-verilog-仿真激励/index.html[22m [2m(+2ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/verilog-verilog-过程赋值/index.html[22m [2m(+2ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/verilog-verilog-过程结构/index.html[22m [2m(+2ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/verilog-verilog-过程连续赋值/index.html[22m [2m(+2ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/verilog-verilog-函数/index.html[22m [2m(+2ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/verilog-verilog-环境搭建/index.html[22m [2m(+2ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/verilog-verilog-基础语法/index.html[22m [2m(+2ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/verilog-verilog-竞争与冒险/index.html[22m [2m(+2ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/verilog-verilog-连续赋值/index.html[22m [2m(+2ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/verilog-verilog-流水线/index.html[22m [2m(+3ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/verilog-verilog-模块和端口/index.html[22m [2m(+2ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/verilog-verilog-模块例化/index.html[22m [2m(+2ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/verilog-verilog-任务/index.html[22m [2m(+3ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/verilog-verilog-设计方法/index.html[22m [2m(+2ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/verilog-verilog-时序控制/index.html[22m [2m(+3ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/verilog-verilog-时延/index.html[22m [2m(+2ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/verilog-verilog-条件语句/index.html[22m [2m(+2ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/verilog-verilog-循环/index.html[22m [2m(+2ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/verilog-verilog-语句块/index.html[22m [2m(+2ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/verilog-verilog-中的数据类型/index.html[22m [2m(+2ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/posts/verilog-verilog-状态机/index.html[22m [2m(+2ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/rss.xml[22m [2m(+57ms)[22m 
-[2m22:25:00[22m   [34m├─[39m [2m/index.html[22m [2m(+11ms)[22m 
-[2m22:25:00[22m [32m✓ Completed in 441ms.
+[2m22:46:51[22m   [34m├─[39m [2m/404.html[22m [2m(+7ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/about/index.html[22m [2m(+2ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/archive/index.html[22m [2m(+5ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/category/d2lnotes/index.html[22m [2m(+8ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/category/d2l/index.html[22m [2m(+4ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/category/verilog/index.html[22m [2m(+5ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/category/bert/index.html[22m [2m(+4ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/category/rust/index.html[22m [2m(+6ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/category/liu-erdaren-pytorch/index.html[22m [2m(+4ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/category/pytorch-distributed/index.html[22m [2m(+4ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/刘二大人pytorch-l1/index.html[22m [2m(+2ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/刘二大人pytorch-l10/index.html[22m [2m(+1ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/刘二大人pytorch-l11/index.html[22m [2m(+1ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/刘二大人pytorch-l12/index.html[22m [2m(+2ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/刘二大人pytorch-l2/index.html[22m [2m(+2ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/刘二大人pytorch-l3/index.html[22m [2m(+2ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/刘二大人pytorch-l4/index.html[22m [2m(+3ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/刘二大人pytorch-l5/index.html[22m [2m(+3ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/刘二大人pytorch-l6/index.html[22m [2m(+2ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/刘二大人pytorch-l7/index.html[22m [2m(+3ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/刘二大人pytorch-l8/index.html[22m [2m(+2ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/刘二大人pytorch-l9/index.html[22m [2m(+2ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/bert-解析bertmodel的outputlast_hidden_statepooler_outputhidden_state/index.html[22m [2m(+2ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/bert-bert-embeddingword-embeddingpooler-embedding/index.html[22m [2m(+2ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/bert-bert-model-architecture-模型架构初探/index.html[22m [2m(+2ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/bert-bertencoder-self-attention-计算细节及计算过程/index.html[22m [2m(+3ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/bert-berttokenizer-subwordwordpiece-如何处理数字等长尾单词/index.html[22m [2m(+2ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/bert-hugging-face-tokenizer/index.html[22m [2m(+2ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/bert-tokenizer_encoder_plus_token_type_ids/index.html[22m [2m(+3ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/bert-torchno_grad-vs-requires_gradfalse/index.html[22m [2m(+2ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/d2l-21-数据操作/index.html[22m [2m(+2ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/d2l-前言_1_install/index.html[22m [2m(+2ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/d2l-u3-31-线性回归--动手学深度学习-200-documentation/index.html[22m [2m(+4ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/d2l-u3-31-linear-regression/index.html[22m [2m(+3ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/d2l-u3-32-线性回归的从零开始实现/index.html[22m [2m(+2ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/d2l-u3-33-线性回归的简洁实现/index.html[22m [2m(+2ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/d2l-u4-41-多层感知机/index.html[22m [2m(+2ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/d2l-u4-48-数值稳定性和模型初始化--动手学深度学习-200-documentation/index.html[22m [2m(+2ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/d2lnotes-attention-is-all-u-need/index.html[22m [2m(+2ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/d2lnotes-cnn-多输入多输出通道/index.html[22m [2m(+2ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/d2lnotes-cnn-汇聚层/index.html[22m [2m(+2ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/d2lnotes-cnn-卷积/index.html[22m [2m(+2ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/d2lnotes-cnn-填充/index.html[22m [2m(+2ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/d2lnotes-cnn-图像卷积/index.html[22m [2m(+2ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/d2lnotes-cnn-alexnet/index.html[22m [2m(+2ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/d2lnotes-cnn-batch-normalization/index.html[22m [2m(+2ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/d2lnotes-cnn-densenet/index.html[22m [2m(+2ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/d2lnotes-cnn-googlenet/index.html[22m [2m(+4ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/d2lnotes-cnn-lenet/index.html[22m [2m(+2ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/d2lnotes-cnn-nin/index.html[22m [2m(+2ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/d2lnotes-cnn-resnet/index.html[22m [2m(+3ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/d2lnotes-cnn-vgg/index.html[22m [2m(+4ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/d2lnotes-cv-样式迁移/index.html[22m [2m(+3ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/d2lnotes-cv-语义分割/index.html[22m [2m(+2ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/d2lnotes-cv-转置卷积/index.html[22m [2m(+2ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/d2lnotes-cv-fcn/index.html[22m [2m(+2ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/d2lnotes-r-cnn/index.html[22m [2m(+2ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/d2lnotes-rnn-机翻数据集的连续/index.html[22m [2m(+1ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/d2lnotes-rnn-深度循环神经网络/index.html[22m [2m(+2ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/d2lnotes-rnn-双向rnn/index.html[22m [2m(+2ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/d2lnotes-rnn-文本预处理/index.html[22m [2m(+2ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/d2lnotes-rnn-encoder-decoder-架构/index.html[22m [2m(+1ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/d2lnotes-rnn-gru/index.html[22m [2m(+1ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/d2lnotes-rnn-language-model-and-dataset/index.html[22m [2m(+2ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/d2lnotes-rnn-lstm/index.html[22m [2m(+2ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/d2lnotes-rnn-rnn/index.html[22m [2m(+2ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/d2lnotes-rnn-rnn的从0开始实现/index.html[22m [2m(+2ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/d2lnotes-rnn-rnn简洁实现/index.html[22m [2m(+2ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/d2lnotes-rnn-seq-modal/index.html[22m [2m(+3ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/d2lnotes-rnn-seq2seq/index.html[22m [2m(+3ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/d2lnotes-u1-linear-regression/index.html[22m [2m(+3ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/d2lnotes-u1-mnist-的尝试/index.html[22m [2m(+2ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/d2lnotes-u1-softmax/index.html[22m [2m(+3ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/d2lnotes-u2-多层感知机/index.html[22m [2m(+2ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/d2lnotes-u2-还没想好/index.html[22m [2m(+3ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/d2lnotes-u2-模型选择/index.html[22m [2m(+3ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/d2lnotes-u2-前向传播/index.html[22m [2m(+3ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/d2lnotes-u2-权重衰减/index.html[22m [2m(+3ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/d2lnotes-u2-暂退法/index.html[22m [2m(+2ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/d2lnotes-u3-参数管理/index.html[22m [2m(+2ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/d2lnotes-u3-层和块/index.html[22m [2m(+2ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/d2lnotes-u3-读写文件/index.html[22m [2m(+3ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/d2lnotes-u3-延后初始化/index.html[22m [2m(+2ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/d2lnotes-u3-自定义层/index.html[22m [2m(+2ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/d2lnotes-u3-gpu/index.html[22m [2m(+2ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/pytorch-distributed-amp-原理-automatic-mixed-precision-自动混合精度/index.html[22m [2m(+2ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/pytorch-distributed-ddp/index.html[22m [2m(+2ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/pytorch-distributed-ddp-初步应用/index.html[22m [2m(+4ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/pytorch-distributed-deepspeed-基本概念原理/index.html[22m [2m(+4ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/pytorch-distributed-model-parallel-on-resnet50/index.html[22m [2m(+3ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/pytorch-distributed-nccl-集合通信collevtive-communication/index.html[22m [2m(+2ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/pytorch-distributed-nndataparallel/index.html[22m [2m(+3ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/pytorch-distributed-tensor-parallel/index.html[22m [2m(+3ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/pytorch-distributed-torch-processgroup/index.html[22m [2m(+2ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/rust学习-变量绑定与解构/index.html[22m [2m(+2ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/rust学习-函数/index.html[22m [2m(+2ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/rust学习-基本类型/index.html[22m [2m(+2ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/rust学习-数值类型/index.html[22m [2m(+2ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/rust学习-语句与表达式/index.html[22m [2m(+3ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/rust学习-字符-布尔-单元类型/index.html[22m [2m(+2ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/rust学习-hello-world/index.html[22m [2m(+3ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/rust学习-rust环境/index.html[22m [2m(+2ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/verilog-verilog-编译指令/index.html[22m [2m(+2ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/verilog-verilog-表达式/index.html[22m [2m(+2ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/verilog-verilog-并行fir滤波器设计/index.html[22m [2m(+2ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/verilog-verilog-除法器设计/index.html[22m [2m(+2ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/verilog-verilog-串行fir-滤波器设计/index.html[22m [2m(+2ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/verilog-verilog-带参例化/index.html[22m [2m(+2ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/verilog-verilog-的数值表示/index.html[22m [2m(+2ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/verilog-verilog-多路分支语句/index.html[22m [2m(+2ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/verilog-verilog-仿真激励/index.html[22m [2m(+2ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/verilog-verilog-过程赋值/index.html[22m [2m(+2ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/verilog-verilog-过程结构/index.html[22m [2m(+3ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/verilog-verilog-过程连续赋值/index.html[22m [2m(+2ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/verilog-verilog-函数/index.html[22m [2m(+2ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/verilog-verilog-环境搭建/index.html[22m [2m(+2ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/verilog-verilog-基础语法/index.html[22m [2m(+2ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/verilog-verilog-竞争与冒险/index.html[22m [2m(+2ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/verilog-verilog-连续赋值/index.html[22m [2m(+2ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/verilog-verilog-流水线/index.html[22m [2m(+3ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/verilog-verilog-模块和端口/index.html[22m [2m(+2ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/verilog-verilog-模块例化/index.html[22m [2m(+2ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/verilog-verilog-任务/index.html[22m [2m(+2ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/verilog-verilog-设计方法/index.html[22m [2m(+2ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/verilog-verilog-时序控制/index.html[22m [2m(+2ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/verilog-verilog-时延/index.html[22m [2m(+11ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/verilog-verilog-条件语句/index.html[22m [2m(+2ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/verilog-verilog-循环/index.html[22m [2m(+2ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/verilog-verilog-语句块/index.html[22m [2m(+1ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/verilog-verilog-中的数据类型/index.html[22m [2m(+1ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/posts/verilog-verilog-状态机/index.html[22m [2m(+1ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/rss.xml[22m [2m(+43ms)[22m 
+[2m22:46:51[22m   [34m├─[39m [2m/index.html[22m [2m(+10ms)[22m 
+[2m22:46:51[22m [32m✓ Completed in 424ms.
 [39m
-[2m22:25:00[22m [34m[build][39m [32m✓ Completed in 2.76s.[39m
-[2m22:25:00[22m [34m[@astrojs/sitemap][39m `sitemap-index.xml` created at `dist`
-[2m22:25:00[22m [34m[build][39m 125 page(s) built in [1m3.50s[22m
-[2m22:25:00[22m [34m[build][39m [1mComplete![22m
+[2m22:46:51[22m [34m[build][39m [32m✓ Completed in 2.51s.[39m
+[2m22:46:51[22m [34m[@astrojs/sitemap][39m `sitemap-index.xml` created at `dist`
+[2m22:46:51[22m [34m[build][39m 132 page(s) built in [1m3.08s[22m
+[2m22:46:51[22m [34m[build][39m [1mComplete![22m

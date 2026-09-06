@@ -2,7 +2,7 @@
 title: "数值类型"
 published: 2026-07-19
 description: ""
-tags: ["Rust学习"]
+tags: ["Rust"]
 draft: false
 ---
 ## 整数类型

@@ -2,7 +2,7 @@
 title: "自定义层"
 published: 2026-08-22
 description: ""
-tags: ["D2lNotes"]
+tags: ["PyTorch"]
 draft: false
 ---
 # 自定义层

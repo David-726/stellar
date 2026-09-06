@@ -2,7 +2,7 @@
 title: "前言_1_install"
 published: 2026-04-07
 description: ""
-tags: ["d2l"]
+tags: ["环境搭建"]
 draft: false
 ---
 ### Anaconda中安装

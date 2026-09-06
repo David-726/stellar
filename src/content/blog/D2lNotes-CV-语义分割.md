@@ -2,7 +2,7 @@
 title: "语义分割"
 published: 2026-05-23
 description: ""
-tags: ["D2lNotes"]
+tags: ["语义分割"]
 draft: false
 ---
 ## 语义分割

@@ -2,7 +2,7 @@
 title: "多层感知机"
 published: 2026-06-06
 description: ""
-tags: ["D2lNotes"]
+tags: ["多层感知机"]
 draft: false
 ---
 ## hidden Layer

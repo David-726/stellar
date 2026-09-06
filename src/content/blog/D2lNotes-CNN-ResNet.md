@@ -2,7 +2,7 @@
 title: "ResNet"
 published: 2026-08-23
 description: ""
-tags: ["D2lNotes"]
+tags: ["CNN"]
 draft: false
 ---
 神经网络 = 一个函数集合

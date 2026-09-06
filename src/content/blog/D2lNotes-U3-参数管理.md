@@ -2,7 +2,7 @@
 title: "参数管理"
 published: 2026-08-21
 description: ""
-tags: ["D2lNotes"]
+tags: ["PyTorch"]
 draft: false
 ---
 # 参数管理

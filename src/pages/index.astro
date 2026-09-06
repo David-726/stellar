@@ -1,6 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import Base from "../layouts/Base.astro";
+import Sidebar from "../components/Sidebar.astro";
 import { SITE } from "../consts";
 
 const posts = (await getCollection("blog", ({ data }) => !data.draft)).sort(
@@ -12,40 +13,45 @@ const fmt = (d: Date) =>
 ---
 
 <Base>
-  <div class="intro-section">
-    <img class="hero" src="/assets/images/hero.webp" alt="hero" width="1320" height="743" />
-    <div class="bio-row">
-      <img class="avatar" src="/assets/images/avatar.gif" alt={SITE.author} width="56" height="56" />
-      <div>
-        <p class="bio-name">{SITE.author}</p>
-        <p class="bio-text">{SITE.bio}</p>
+  <div class="with-sidebar">
+    <Sidebar />
+    <div class="content-main">
+      <div class="intro-section">
+        <img class="hero" src="/assets/images/hero.webp" alt="hero" width="1320" height="743" />
+        <div class="bio-row">
+          <img class="avatar" src="/assets/images/avatar.gif" alt={SITE.author} width="56" height="56" />
+          <div>
+            <p class="bio-name">{SITE.author}</p>
+            <p class="bio-text">{SITE.bio}</p>
+          </div>
+        </div>
+        <nav>
+          {
+            SITE.links.map((link) => (
+              <a href={link.url} target={link.url.startsWith("http") ? "_blank" : undefined}>
+                {link.name}
+              </a>
+            ))
+          }
+        </nav>
+      </div>
+
+      <div class="post-list">
+        <h2 class="section-label">Posts</h2>
+        {
+          posts.map((post, i) => (
+            <div class="post-item" style={`animation-delay:${0.08 * i + 0.15}s`}>
+              <p class="post-item-title">
+                <a href={`/posts/${post.id}/`}>{post.data.title}</a>
+              </p>
+              <p class="post-item-meta">
+                <time>{fmt(post.data.published)}</time>
+                {post.data.tags.length > 0 && <span> · {post.data.tags.join(", ")}</span>}
+              </p>
+            </div>
+          ))
+        }
       </div>
     </div>
-    <nav>
-      {
-        SITE.links.map((link) => (
-          <a href={link.url} target={link.url.startsWith("http") ? "_blank" : undefined}>
-            {link.name}
-          </a>
-        ))
-      }
-    </nav>
-  </div>
-
-  <div class="post-list">
-    <h2 class="section-label">Posts</h2>
-    {
-      posts.map((post, i) => (
-        <div class="post-item" style={`animation-delay:${0.08 * i + 0.15}s`}>
-          <p class="post-item-title">
-            <a href={`/posts/${post.id}/`}>{post.data.title}</a>
-          </p>
-          <p class="post-item-meta">
-            <time>{fmt(post.data.published)}</time>
-            {post.data.tags.length > 0 && <span> · {post.data.tags.join(", ")}</span>}
-          </p>
-        </div>
-      ))
-    }
   </div>
 </Base>

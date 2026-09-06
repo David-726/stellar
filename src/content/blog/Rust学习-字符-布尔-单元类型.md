@@ -2,7 +2,7 @@
 title: "字符 布尔 单元类型"
 published: 2026-07-20
 description: ""
-tags: ["Rust学习"]
+tags: ["Rust"]
 draft: false
 ---
 ## 字符类型(char)

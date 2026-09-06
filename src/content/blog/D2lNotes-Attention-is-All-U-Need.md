@@ -2,7 +2,7 @@
 title: "Attention is All U Need"
 published: 2026-08-30
 description: ""
-tags: ["D2lNotes"]
+tags: ["注意力机制"]
 draft: false
 ---
 <img src="/posts/assets/bkl0n0-Pasted-image-20260831184444.png" alt="Pasted image 20260831184444.png" loading="lazy" /><img src="/posts/assets/bkl0n0-Pasted-image-20260831184441.png" alt="Pasted image 20260831184441.png" loading="lazy" /><img src="/posts/assets/163gjzi-Pasted-image-20260831184203.png" alt="Pasted image 20260831184203.png" loading="lazy" />### 注意力机制

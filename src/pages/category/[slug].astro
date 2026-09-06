@@ -1,0 +1,49 @@
+---
+import { getCollection } from "astro:content";
+import Base from "../../layouts/Base.astro";
+import Sidebar from "../../components/Sidebar.astro";
+import { CATEGORIES } from "../../lib/categories";
+
+export async function getStaticPaths() {
+  return CATEGORIES.map((c) => ({ params: { slug: c.slug }, props: { cat: c } }));
+}
+
+const { cat } = Astro.props;
+// 按文章 id 首段精确匹配（中文原样保留，英文转小写）
+const pref = cat.name.toLowerCase();
+const posts = (await getCollection("blog", ({ data }) => !data.draft))
+  .filter((p) => {
+    const first = p.id.split("-")[0];
+    if (first === pref) return true;
+    // "Pytorch distributed" 目录：id 首段是 "pytorch"，但 "刘二大人pytorch" 不算
+    return pref === "pytorch distributed" && first === "pytorch";
+  })
+  .sort((a, b) => b.data.published.valueOf() - a.data.published.valueOf());
+
+const fmt = (d: Date) =>
+  d.toLocaleDateString("zh-CN", { year: "numeric", month: "long", day: "numeric" });
+---
+
+<Base title={cat.name}>
+  <div class="with-sidebar">
+    <Sidebar />
+    <div class="content-main">
+      <div class="post-list">
+        <h2 class="section-label" style="margin-top:0">{cat.name} · {posts.length} 篇</h2>
+        {
+          posts.map((post) => (
+            <div class="post-item">
+              <p class="post-item-title">
+                <a href={`/posts/${post.id}/`}>{post.data.title}</a>
+              </p>
+              <p class="post-item-meta">
+                <time>{fmt(post.data.published)}</time>
+                {post.data.tags.length > 0 && <span> · {post.data.tags.join(", ")}</span>}
+              </p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</Base>

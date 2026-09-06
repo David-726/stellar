@@ -2,7 +2,7 @@
 title: "RNN的从0开始实现"
 published: 2026-08-27
 description: ""
-tags: ["D2lNotes"]
+tags: ["RNN"]
 draft: false
 ---
 ```python

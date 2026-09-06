@@ -2,7 +2,7 @@
 title: "hugging face tokenizer"
 published: 2026-09-02
 description: ""
-tags: ["BERT"]
+tags: ["BERT", "HuggingFace"]
 draft: false
 ---
 - tokenizer,构造输入

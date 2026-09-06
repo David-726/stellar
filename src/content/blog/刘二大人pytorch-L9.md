@@ -2,7 +2,7 @@
 title: "L9"
 published: 2026-04-26
 description: ""
-tags: ["刘二大人pytorch"]
+tags: ["PyTorch"]
 draft: false
 ---
 # 多分类问题处理

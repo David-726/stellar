@@ -2,7 +2,7 @@
 title: "语句与表达式"
 published: 2026-07-20
 description: ""
-tags: ["Rust学习"]
+tags: ["Rust"]
 draft: false
 ---
 Rust的函数体是由一系列语句组成，最后由一个表达式来返回值：

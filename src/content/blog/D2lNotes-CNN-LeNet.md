@@ -2,7 +2,7 @@
 title: "LeNet"
 published: 2026-08-22
 description: ""
-tags: ["D2lNotes"]
+tags: ["CNN"]
 draft: false
 ---
 # LeNet

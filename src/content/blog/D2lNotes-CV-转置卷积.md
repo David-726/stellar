@@ -2,7 +2,7 @@
 title: "转置卷积"
 published: 2026-05-23
 description: ""
-tags: ["D2lNotes"]
+tags: ["CNN", "语义分割"]
 draft: false
 ---
 # 转置卷积

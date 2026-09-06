@@ -2,7 +2,7 @@
 title: "Seq2Seq"
 published: 2026-08-30
 description: ""
-tags: ["D2lNotes"]
+tags: ["RNN"]
 draft: false
 ---
 机翻输入输出

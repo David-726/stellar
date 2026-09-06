@@ -2,7 +2,7 @@
 title: "torch processgroup"
 published: 2026-09-03
 description: ""
-tags: ["Pytorch distributed"]
+tags: ["PyTorch"]
 draft: false
 ---
 ## 点对点通信，集合通信

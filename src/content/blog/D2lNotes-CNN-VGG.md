@@ -2,7 +2,7 @@
 title: "VGG"
 published: 2026-08-23
 description: ""
-tags: ["D2lNotes"]
+tags: ["CNN"]
 draft: false
 ---
 ### VGG块

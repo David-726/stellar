@@ -2,7 +2,7 @@
 title: "层和块"
 published: 2026-06-08
 description: ""
-tags: ["D2lNotes"]
+tags: ["PyTorch"]
 draft: false
 ---
 

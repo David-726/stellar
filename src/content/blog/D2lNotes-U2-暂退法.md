@@ -2,7 +2,7 @@
 title: "暂退法"
 published: 2026-06-07
 description: ""
-tags: ["D2lNotes"]
+tags: ["正则化"]
 draft: false
 ---
 

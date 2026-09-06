@@ -2,7 +2,7 @@
 title: "Model parallel on ResNet50"
 published: 2026-09-01
 description: ""
-tags: ["Pytorch distributed"]
+tags: ["CNN"]
 draft: false
 ---
 ### outline

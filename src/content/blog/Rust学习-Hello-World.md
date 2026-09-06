@@ -2,7 +2,7 @@
 title: "Hello World"
 published: 2026-07-10
 description: ""
-tags: ["Rust学习"]
+tags: ["Rust"]
 draft: false
 ---
 ```rust

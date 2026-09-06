@@ -2,7 +2,7 @@
 title: "L12"
 published: 2026-05-06
 description: ""
-tags: ["刘二大人pytorch"]
+tags: ["PyTorch"]
 draft: false
 ---
 # L12

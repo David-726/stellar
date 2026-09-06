@@ -2,7 +2,7 @@
 title: "amp 原理 automatic mixed precision 自动混合精度"
 published: 2026-09-05
 description: ""
-tags: ["Pytorch distributed"]
+tags: ["混合精度"]
 draft: false
 ---
 混合精度训练

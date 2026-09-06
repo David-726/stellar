@@ -2,7 +2,7 @@
 title: "双向RNN"
 published: 2026-08-30
 description: ""
-tags: ["D2lNotes"]
+tags: ["RNN"]
 draft: false
 ---
 ### 隐马尔可夫模型中的动态规划

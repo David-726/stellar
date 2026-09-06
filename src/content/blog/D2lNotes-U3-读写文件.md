@@ -2,7 +2,7 @@
 title: "读写文件"
 published: 2026-08-22
 description: ""
-tags: ["D2lNotes"]
+tags: ["PyTorch"]
 draft: false
 ---
 # 读写文件

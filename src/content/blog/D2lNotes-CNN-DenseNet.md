@@ -2,7 +2,7 @@
 title: "DenseNet"
 published: 2026-08-24
 description: ""
-tags: ["D2lNotes"]
+tags: ["CNN"]
 draft: false
 ---
 # DenseNet

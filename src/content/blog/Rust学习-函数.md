@@ -2,7 +2,7 @@
 title: "函数"
 published: 2026-07-20
 description: ""
-tags: ["Rust学习"]
+tags: ["Rust"]
 draft: false
 ---
 Rust的函数，和其他语言几乎没有什么差异。

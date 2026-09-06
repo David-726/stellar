@@ -2,7 +2,7 @@
 title: "bertencoder self attention 计算细节及计算过程"
 published: 2026-09-03
 description: ""
-tags: ["BERT"]
+tags: ["BERT", "注意力机制"]
 draft: false
 ---
 $$

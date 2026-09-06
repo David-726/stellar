@@ -2,7 +2,7 @@
 title: "多输入多输出通道"
 published: 2026-08-22
 description: ""
-tags: ["D2lNotes"]
+tags: ["CNN"]
 draft: false
 ---
 # 多输入多输出通道

@@ -2,7 +2,7 @@
 title: "Linear Regression"
 published: 2026-05-25
 description: ""
-tags: ["D2lNotes"]
+tags: ["线性回归"]
 draft: false
 ---
 # Linear Regression

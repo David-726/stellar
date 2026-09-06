@@ -2,7 +2,7 @@
 title: "Softmax"
 published: 2026-05-26
 description: ""
-tags: ["D2lNotes"]
+tags: ["softmax"]
 draft: false
 ---
 ### Softmax

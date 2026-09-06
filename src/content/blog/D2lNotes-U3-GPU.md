@@ -2,7 +2,7 @@
 title: "GPU"
 published: 2026-08-22
 description: ""
-tags: ["D2lNotes"]
+tags: ["GPU"]
 draft: false
 ---
 ## 查看N卡信息

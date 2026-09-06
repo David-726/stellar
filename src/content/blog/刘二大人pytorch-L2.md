@@ -2,7 +2,7 @@
 title: "L2"
 published: 2026-04-16
 description: ""
-tags: ["刘二大人pytorch"]
+tags: ["PyTorch"]
 draft: false
 ---
 ## L2

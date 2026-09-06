@@ -295,6 +295,112 @@ hr {
   margin: 3em auto;
 }
 
+/* ===== 左侧分类栏 ===== */
+
+.with-sidebar {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.sidebar {
+  width: 200px;
+  flex-shrink: 0;
+  position: sticky;
+  top: 76px;
+}
+
+.cat-tree {
+  font-size: 0.88em;
+}
+
+.cat-root {
+  display: block;
+  font-weight: 700;
+  font-size: 1.05em;
+  letter-spacing: 0.04em;
+  color: var(--core-black);
+  padding: 8px 12px;
+  border-left: 2px solid transparent;
+}
+
+.cat-tree ul {
+  list-style: none;
+  padding: 0;
+  margin: 4px 0 0;
+}
+
+.cat-tree li a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 12px;
+  margin-left: 10px;
+  border-left: 2px solid var(--core-light-gray);
+  color: var(--core-gray);
+  transition: color 0.15s, border-color 0.15s, background 0.15s;
+}
+
+.cat-tree li a:hover {
+  color: var(--core-black);
+  background: color-mix(in srgb, var(--core-light-gray) 40%, transparent);
+}
+
+.cat-tree li a.selected {
+  color: var(--core-blue);
+  border-left-color: var(--core-blue);
+  background: color-mix(in srgb, var(--core-light-gray) 30%, transparent);
+}
+
+.cat-count {
+  font-family: var(--font-mono);
+  font-size: 0.78em;
+  color: var(--core-gray);
+  background: color-mix(in srgb, var(--core-light-gray) 60%, transparent);
+  border-radius: 10px;
+  padding: 0 7px;
+  line-height: 1.7;
+}
+
+/* 正文占位：有侧栏时主列吃剩余宽度 */
+.with-sidebar > .content-main {
+  flex: 1;
+  min-width: 0;
+}
+
+@media (max-width: 1024px) {
+  .with-sidebar {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .sidebar {
+    position: static;
+    width: 100%;
+  }
+
+  .cat-tree ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 8px 0 0;
+  }
+
+  .cat-tree li a {
+    margin-left: 0;
+    border-left: none;
+    border: 1px solid var(--core-light-gray);
+    border-radius: 16px;
+    padding: 4px 12px;
+  }
+
+  .cat-tree li a.selected {
+    border-color: var(--core-blue);
+    background: transparent;
+  }
+}
+
 /* ===== 首页文章列表 ===== */
 
 .intro-section {

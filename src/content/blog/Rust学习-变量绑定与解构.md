@@ -2,7 +2,7 @@
 title: "变量绑定与解构"
 published: 2026-07-10
 description: ""
-tags: ["Rust学习"]
+tags: ["Rust"]
 draft: false
 ---
 ## YesButWhy

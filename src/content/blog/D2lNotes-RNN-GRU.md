@@ -2,7 +2,7 @@
 title: "GRU"
 published: 2026-08-29
 description: ""
-tags: ["D2lNotes"]
+tags: ["RNN"]
 draft: false
 ---
 ### 门控隐状态

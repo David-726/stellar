@@ -2,7 +2,7 @@
 title: "RNN"
 published: 2026-08-27
 description: ""
-tags: ["D2lNotes"]
+tags: ["RNN"]
 draft: false
 ---
 ### 无隐状态的神经网络

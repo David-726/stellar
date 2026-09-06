@@ -2,7 +2,7 @@
 title: "基本类型"
 published: 2026-07-12
 description: ""
-tags: ["Rust学习"]
+tags: ["Rust"]
 draft: false
 ---
 Rust中每一个值都有其确切的数据类型，总的来说可以分为两类：基本和复合。

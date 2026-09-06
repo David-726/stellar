@@ -2,7 +2,7 @@
 title: "汇聚层"
 published: 2026-08-22
 description: ""
-tags: ["D2lNotes"]
+tags: ["CNN"]
 draft: false
 ---
 # 汇聚层

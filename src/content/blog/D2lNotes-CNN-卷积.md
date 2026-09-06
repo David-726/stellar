@@ -2,7 +2,7 @@
 title: "卷积"
 published: 2026-08-22
 description: ""
-tags: ["D2lNotes"]
+tags: ["CNN"]
 draft: false
 ---
 - 平移不变性

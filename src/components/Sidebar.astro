@@ -1,0 +1,40 @@
+---
+import { CATEGORIES } from "../lib/categories";
+import { getCollection } from "astro:content";
+
+// 每个分类的文章数：逻辑与分类页一致
+const posts = await getCollection("blog", ({ data }) => !data.draft);
+const countOf = (name: string) => {
+  const pref = name.toLowerCase();
+  return posts.filter((p) => {
+    const first = p.id.split("-")[0];
+    if (first === pref) return true;
+    return pref === "pytorch distributed" && first === "pytorch";
+  }).length;
+};
+
+const currentPath = Astro.url.pathname;
+---
+
+<aside class="sidebar">
+  <nav class="cat-tree">
+    <a href="/archive/" class:list={[{ selected: currentPath.startsWith("/archive") }]} class="cat-root">
+      selflearning
+    </a>
+    <ul>
+      {
+        CATEGORIES.map((c) => (
+          <li>
+            <a
+              href={`/category/${c.slug}/`}
+              class:list={[{ selected: currentPath === `/category/${c.slug}/` }]}
+            >
+              {c.name}
+              <span class="cat-count">{countOf(c.name)}</span>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
+</aside>

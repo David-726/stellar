@@ -2,7 +2,7 @@
 title: "图像卷积"
 published: 2026-08-22
 description: ""
-tags: ["D2lNotes"]
+tags: ["CNN"]
 draft: false
 ---
 ### 互相关运算
