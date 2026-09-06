@@ -18,6 +18,10 @@ const SKIP_DIRS = new Set([
 ]);
 // d2l 网页剪藏副本目录（目录名太长且内容是网页快照，剔除）
 const SKIP_DIR_PATTERNS = [/documentation$/];
+// 只迁移这些顶层目录（置空 Set 则迁移全部）；根目录散文件不迁移
+const KEEP_DIRS = new Set([
+  "D2lNotes", "d2l", "Verilog", "BERT", "Rust学习", "刘二大人pytorch", "Pytorch distributed",
+]);
 
 function* walk(dir) {
   for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
@@ -97,6 +101,9 @@ let ok = 0, skipped = 0;
 const skippedList = [];
 for (const abs of walk(SRC)) {
   const rel = path.relative(SRC, abs);
+  // 目录白名单：只保留 KEEP_DIRS 下的文件
+  const topDir = path.dirname(rel) === "." ? "" : rel.split(/[\\/]/)[0];
+  if (KEEP_DIRS.size > 0 && !KEEP_DIRS.has(topDir)) { continue; }
   const txt = fs.readFileSync(abs, "utf-8");
   if (txt.trim() === "") { skipped++; skippedList.push(rel); continue; }
   // Excalidraw 源文件：无渲染内容，跳过
@@ -105,7 +112,6 @@ for (const abs of walk(SRC)) {
   if (path.basename(abs) === ".md") { skipped++; skippedList.push(rel); continue; }
   if (/Open the notebook in Colab/.test(txt.slice(0, 800))) { skipped++; skippedList.push(rel); continue; }
 
-  const topDir = path.dirname(rel) === "." ? "" : rel.split(/[\\/]/)[0];
   const title = path.basename(rel).replace(/\.md$/, "");
 
   // 日期：frontmatter 已有则沿用；否则文件名/创建时间
