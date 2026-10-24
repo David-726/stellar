@@ -8,7 +8,15 @@ draft: false
 ## Padding
 我们直到Conv之后，输出会比输入略小，**经常丢失边缘像素**，随着卷积层的叠加，丢置会越来越多。
 ->聪明的古人发明了`Padding`
-<img src="/posts/assets/4k714i-conv-pad.svg" alt="conv-pad.svg" loading="lazy" />从而输出尺寸等于:
+
+
+
+
+<img src="/posts/assets/4k714i-conv-pad.svg" alt="conv-pad.svg" loading="lazy" />
+
+
+
+从而输出尺寸等于:
 $$
 (n_{h}-k_{h}+p_{h}+1)*(n_{w}-k_{w}+p_{w}-1)
 $$
@@ -41,7 +49,15 @@ comp_conv2d(conv2d,X).shape
 ### 步幅
 计算互相关时，卷积窗口从输入张量的左上角开始，向下、向右滑动。
 将每次滑动的元素称之为**slide**
-<img src="/posts/assets/cbqk74-conv-stride.svg" alt="conv-stride.svg" loading="lazy" />垂直步幅$s_{h}$、水平步幅$s_{w}$时，输出形状为
+
+
+
+
+<img src="/posts/assets/cbqk74-conv-stride.svg" alt="conv-stride.svg" loading="lazy" />
+
+
+
+垂直步幅$s_{h}$、水平步幅$s_{w}$时，输出形状为
 $$
 [(n_{h}-k_{h}+p_{h}+s_{h})/s_{h}]*[(n_{w}-k_{w}+p_{w}+s_{w})/s_{w}]
 $$

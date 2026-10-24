@@ -128,7 +128,9 @@ $$
 P(y|x)=exp(log(\frac{1}{\sqrt{2\pi\sigma^{2}}}))\exp\left(-\frac{1}{2 \sigma^2} (y - \mathbf{w}^\top \mathbf{x} - b)^2\right)
 =-\frac{1}{2}exp(log(w\pi\sigma^{2}))exp(-\frac{1}{2\sigma^{2}}*(y-w^{T}x-b))^{2}
 \end{split}
-$$$$
+$$
+
+$$
 -\log P(\mathbf y \mid \mathbf X) = \sum_{i=1}^n \frac{1}{2} \log(2 \pi \sigma^2) + \frac{1}{2 \sigma^2} \left(y^{(i)} - \mathbf{w}^\top \mathbf{x}^{(i)} - b\right)^2.
 $$
 ### Practice:
@@ -355,4 +357,3 @@ print(true_b-w.reshape(true_b.shape()))
     $$
     
 1.  如何访问线性回归的梯度？
-

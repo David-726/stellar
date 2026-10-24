@@ -7,7 +7,15 @@ draft: false
 ---
 ### 互相关运算
 严格而言,Conv Kernel进行的不是卷积运算，而是互相关运算
-<img src="/posts/assets/zkz0c3-correlation.svg" alt="correlation.svg" loading="lazy" />输出大小略小于输入大小
+
+
+
+
+<img src="/posts/assets/zkz0c3-correlation.svg" alt="correlation.svg" loading="lazy" />
+
+
+
+输出大小略小于输入大小
 输出等于:
 $$(n_{h}-k_{h}+1)*(n_{w}-k_{w}+1)$$
 ```python

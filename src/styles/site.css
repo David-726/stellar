@@ -491,29 +491,6 @@ hr {
   margin: 0 0 1.6em;
 }
 
-/* 列表项入场动画 */
-@keyframes rise-in {
-  from {
-    opacity: 0;
-    transform: translateY(12px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.post-item {
-  animation: rise-in 0.5s ease both;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .post-item {
-    animation: none;
-  }
-}
-
 /* ===== About 页 ===== */
 
 .about-page {

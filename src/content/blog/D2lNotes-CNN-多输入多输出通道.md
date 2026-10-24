@@ -9,7 +9,15 @@ draft: false
 ### 多输入
 输入包含多个通道时，需要构造1个与输入数据具有相同输入通道数的卷积核，以便与输入数据进行互相关运算。
 对每个通道输入的2为张量和卷积核的二维张量进行互相关运算，再对通道求和得到2维张量，这是多通道输入和多输入通道卷积核之间进行互相关运算的结果:
+
+
+
+
 <img src="/posts/assets/y45azc-conv-multi-in.svg" alt="conv-multi-in.svg" loading="lazy" />
+
+
+
+
 ```python
 import torch
 from d2l import torch as d2l
@@ -34,7 +42,15 @@ corr2d_multi_in_out(X,K)
 作用发生在通道上
 不改变高宽的前提下，对通道进行线性组合和调整
 
+
+
+
+
 <img src="/posts/assets/11mr3ur-conv-1x1.svg" alt="conv-1x1.svg" loading="lazy" />
+
+
+
+
 我们仍然可以视作每个像素位置应用的全连接层，以$c_{i}$转换为$c_{o}$个输出值
 **妙哉妙哉**
 **善**

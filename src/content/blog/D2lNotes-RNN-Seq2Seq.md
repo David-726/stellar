@@ -9,7 +9,15 @@ draft: false
 DNA序列转3d
 都是比较常见的Seq2Seq问题
 采用Decoder-Encoder架构
+
+
+
+
 <img src="/posts/assets/1yb3ou8-seq2seq.svg" alt="seq2seq.svg" loading="lazy" />
+
+
+
+
 ```python
 import collections
 import math

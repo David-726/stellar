@@ -9,7 +9,15 @@ draft: false
 模型有专门的机制来确定应该何时更新隐状态，以及何时重置隐状态。
 **这些机制是可学的**
 ### 重置门和更新门
-<img src="/posts/assets/1de1ket-gru-1.svg" alt="gru-1.svg" loading="lazy" />输入是由当前时间步的输入和前一时间步的隐状态给出，两个门的输出是由使用sigmoid激活函数的两个全连接层给出。
+
+
+
+
+<img src="/posts/assets/1de1ket-gru-1.svg" alt="gru-1.svg" loading="lazy" />
+
+
+
+输入是由当前时间步的输入和前一时间步的隐状态给出，两个门的输出是由使用sigmoid激活函数的两个全连接层给出。
 $$
 \begin{align}
 R_t&=\sigma(X_tW_{wr}+H_{t-1}W_{hr}+b_r)\\
@@ -19,10 +27,26 @@ $$
 #### 候选隐状态
 将重置门$R_t$和常规隐状态更新机制集成，得到在时间步t的候选隐状态$\hat H_t$
 $$\hat H_t=tanh(X_tW_{xh}+(R_t\odot H_{t-1})W_{hh}+b_{h}$$
+
+
+
+
 <img src="/posts/assets/1r7vi48-gru-2.svg" alt="gru-2.svg" loading="lazy" />
+
+
+
+
 #### 隐状态
 $$H_t=Z_t\odot H_{t-1}+(1-Z_t)\odot\hat H_t$$
-$Z_t$接近于1时，模型倾向于只保留旧状态，此时$X_t$的信息基本被忽略，有效的跳过了依赖链条中的时间步t,相反,$Z_t$接近0时，新的隐状态$H_t$就会接近候选隐状态$\hat H_t$.<img src="/posts/assets/2au105-gru-3.svg" alt="gru-3.svg" loading="lazy" />
+$Z_t$接近于1时，模型倾向于只保留旧状态，此时$X_t$的信息基本被忽略，有效的跳过了依赖链条中的时间步t,相反,$Z_t$接近0时，新的隐状态$H_t$就会接近候选隐状态$\hat H_t$.
+
+
+
+<img src="/posts/assets/2au105-gru-3.svg" alt="gru-3.svg" loading="lazy" />
+
+
+
+
 ### 从0开始实现
 ```python
 import torch

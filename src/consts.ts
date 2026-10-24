@@ -6,7 +6,7 @@ export const SITE = {
   description: "深度学习 / FPGA / 生活记录",
   // 站点开始日期，用于页脚版权区间
   startDate: 2026,
-  author: "CC",
+  author: "JS",
   bio: "We choose to go to the moon in this decade and do the other things, not because they are easy, but because they are hard.",
   links: [
     { name: "github", url: "https://github.com/David-726" },

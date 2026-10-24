@@ -28,15 +28,15 @@ total_pooler_params = 0
 - Bert_large 有 24个encoder layer
 ```python
 for name,param in model.named_parameters():
-	print(name,'->',param.shape,'->',param.numel)#numel->number of memrble to learrned elements
+	print(name,'->',param.shape,'->',param.numel())#numel->number of memrble to learrned elements
 	if 'embedding' in name:
-		total_embedding_params += params.numel()
+		total_embedding_params += param.numel()
 	if 'encoder' in name:
-		total_encoder_params += params.numel()
+		total_encoder_params += param.numel()
 	if 'pooler' in name:
-		total_encoder_params += params.numel()
-	if param.require_params += params.numel()
-	total.param+=params.numel()
+		total_pooler_params += param.numel()
+	if param.require_grad:
+	total.param+=param.numel()
 ```
 ```python
 print(total_embedding_params,total_encoder_params,total_pooler_params)

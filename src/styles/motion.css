@@ -1,0 +1,284 @@
+/* 保留原有版式；动效独立维护，不依赖动画库。 */
+:root {
+  --motion-ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+html[data-theme="light"] { color-scheme: light; }
+html[data-theme="dark"] { color-scheme: dark; }
+
+:where(a, button):focus-visible {
+  outline: 2px solid var(--core-blue);
+  outline-offset: 5px;
+  border-radius: 3px;
+}
+
+#main-content:focus { outline: none; }
+:where([id]) { scroll-margin-top: 90px; }
+
+.skip-link {
+  position: fixed;
+  top: 8px;
+  left: 16px;
+  z-index: 100;
+  padding: 8px 16px;
+  border: 1px solid var(--core-light-gray);
+  border-radius: 6px;
+  background: var(--core-bg);
+  font-size: 16px;
+  transform: translateY(-150%);
+}
+.skip-link:focus { transform: translateY(0); }
+
+/* 阅读时给吸顶导航一点层次，避免改变高度导致页面跳动。 */
+.site-nav {
+  transition: box-shadow 300ms ease, background-color 280ms ease;
+}
+.nav-logo, .nav-logo img { flex-shrink: 0; }
+.is-scrolled .site-nav {
+  box-shadow: 0 5px 24px rgb(0 0 0 / 5%);
+}
+nav.top-nav a::after {
+  left: 0;
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 300ms var(--motion-ease);
+}
+nav.top-nav a:is(:hover, :focus-visible, .selected)::after {
+  transform: scaleX(1);
+}
+.theme-toggle {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+}
+.theme-toggle:active { transform: scale(0.92); }
+.theme-toggle svg { animation: theme-icon-in 280ms var(--motion-ease); }
+
+/* 只在主动切换主题时过渡颜色，日常滚动不触发全页过渡。 */
+.theme-transition body,
+.theme-transition .site-nav,
+.theme-transition .about-card,
+.theme-transition .back-to-top {
+  transition: background-color 280ms ease, color 280ms ease, border-color 280ms ease;
+}
+
+/* 等元素即将进入视口再显现；没有 JavaScript 时所有内容正常可见。 */
+[data-reveal="pending"] {
+  opacity: 0;
+  translate: 0 12px;
+}
+[data-reveal="visible"] {
+  animation: reveal-in 620ms var(--motion-ease) both;
+  animation-delay: var(--reveal-delay, 0ms);
+}
+[data-reveal]:focus-within {
+  opacity: 1;
+  translate: none;
+  animation: none;
+}
+
+.hero-frame {
+  max-width: var(--viewport-para);
+  margin: 0 auto 2em;
+  border-radius: 10px;
+  overflow: hidden;
+  isolation: isolate;
+  transform: perspective(1000px) rotateX(var(--hero-rotate-x, 0deg)) rotateY(var(--hero-rotate-y, 0deg));
+  transition: transform 650ms var(--motion-ease), box-shadow 650ms ease;
+  animation: intro-in 850ms var(--motion-ease) both;
+}
+.hero-frame .hero {
+  margin: 0;
+  border-radius: 0;
+  transform: translate3d(var(--hero-x, 0px), calc(var(--hero-y, 0px) + var(--hero-scroll, 0px)), 0) scale(1.04);
+  transition: transform 650ms var(--motion-ease);
+}
+.bio-row .avatar,
+.about-avatar {
+  transition: transform 500ms var(--motion-ease), box-shadow 500ms ease;
+}
+.post-item { position: relative; isolation: isolate; }
+.post-item::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: -12px;
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--core-light-gray) 24%, transparent);
+  opacity: 0;
+  transition: opacity 260ms ease;
+  pointer-events: none;
+}
+.post-item-title {
+  transition: transform 350ms var(--motion-ease);
+}
+.post-item-title, .article-header h1, .archive-list a { overflow-wrap: anywhere; }
+.archive-list a { min-width: 0; }
+.post-item-title a { transition: color 200ms ease; }
+.post-item:focus-within::before { opacity: 1; }
+.cat-tree li a {
+  transition: color 200ms ease, border-color 200ms ease, background-color 200ms ease, transform 350ms var(--motion-ease);
+}
+.intro-section > nav a,
+.about-card nav a,
+.site-footer nav a,
+.post-nav a {
+  display: inline-block;
+  transition: color 200ms ease, transform 300ms var(--motion-ease);
+}
+.intro-section > nav,
+.about-card nav,
+.site-footer nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 22px;
+}
+.about-card nav { justify-content: center; }
+.archive-list li {
+  transition: background-color 200ms ease, transform 350ms var(--motion-ease);
+}
+.article-header { animation: intro-in 650ms var(--motion-ease) both; }
+.article-body :where(h2, h3, h4) { scroll-margin-top: 90px; }
+.article-body { overflow-wrap: anywhere; }
+.article-body .katex { overflow-wrap: normal; }
+.article-body :not(.katex-display) > .katex {
+  display: inline-block;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  vertical-align: middle;
+}
+.article-body .katex-display {
+  max-width: min(100%, var(--viewport-para));
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-block: 0.25em;
+}
+.article-body table {
+  display: block;
+  max-width: min(100%, var(--viewport-para));
+  overflow-x: auto;
+}
+.article-body pre { max-width: 100%; }
+
+/* 进度条只在文章页出现，不占布局空间。 */
+.reading-progress {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 2px;
+  background: var(--core-blue);
+  transform: scaleX(0);
+  transform-origin: left;
+  pointer-events: none;
+}
+.back-to-top {
+  position: fixed;
+  right: max(24px, env(safe-area-inset-right));
+  bottom: max(24px, env(safe-area-inset-bottom));
+  z-index: 40;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--core-light-gray);
+  border-radius: 50%;
+  color: var(--core-gray);
+  background: var(--core-bg);
+  box-shadow: 0 3px 14px rgb(0 0 0 / 5%);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  pointer-events: none;
+  cursor: pointer;
+  transition: opacity 250ms ease, visibility 250ms, transform 350ms var(--motion-ease), color 200ms, border-color 200ms;
+}
+.back-to-top.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.back-to-top svg { transition: transform 300ms var(--motion-ease); }
+.back-to-top:is(:hover, :focus-visible) {
+  color: var(--core-blue);
+  border-color: var(--core-blue);
+}
+.back-to-top:is(:hover, :focus-visible) svg { transform: translateY(-3px); }
+.back-to-top:active { transform: scale(0.94); }
+
+@media (hover: hover) and (pointer: fine) {
+  .hero-frame:hover { box-shadow: 0 12px 32px rgb(0 0 0 / 9%); }
+  .bio-row .avatar:hover,
+  .about-avatar:hover { transform: translateY(-3px) rotate(-4deg); }
+  .post-item:hover::before { opacity: 1; }
+  .post-item:hover .post-item-title { transform: translateX(4px); }
+  .cat-tree li a:hover,
+  .archive-list li:hover { transform: translateX(3px); }
+  .intro-section > nav a:hover,
+  .about-card nav a:hover,
+  .site-footer nav a:hover { transform: translateY(-2px); }
+  .post-nav a:first-child:hover { transform: translateX(-3px); }
+  .post-nav a:last-child:hover { transform: translateX(3px); }
+}
+
+@keyframes reveal-in {
+  from { opacity: 0; translate: 0 12px; }
+  to { opacity: 1; translate: 0 0; }
+}
+@keyframes intro-in {
+  from { opacity: 0; translate: 0 8px; }
+  to { opacity: 1; translate: 0 0; }
+}
+@keyframes theme-icon-in {
+  from { opacity: 0; transform: rotate(-35deg) scale(0.8); }
+  to { opacity: 1; transform: rotate(0) scale(1); }
+}
+
+/* 浏览器支持时，页面之间也保留轻柔的淡入淡出。 */
+@view-transition { navigation: auto; }
+::view-transition-old(root) { animation-duration: 160ms; }
+::view-transition-new(root) { animation-duration: 220ms; }
+
+@media (max-width: 1024px) {
+  .with-sidebar > .content-main { width: 100%; }
+}
+@media (max-width: 768px) {
+  .theme-toggle { width: 44px; height: 44px; }
+  .top-nav a { min-height: 44px; display: inline-flex; align-items: center; }
+  .back-to-top { right: max(16px, env(safe-area-inset-right)); bottom: max(16px, env(safe-area-inset-bottom)); }
+}
+@media (max-width: 380px) {
+  nav.top-nav { gap: 4px 8px; font-size: 16px; }
+  .site-nav-inner { padding-inline: 12px; }
+  .nav-logo { gap: 6px; }
+  .theme-toggle { margin-left: 0; }
+}
+@media (hover: none), (pointer: coarse) {
+  .hero-frame { transform: none; }
+  .hero-frame .hero { transform: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  @view-transition { navigation: none; }
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+  [data-reveal="pending"] { opacity: 1; translate: none; }
+  .hero-frame, .hero-frame .hero,
+  .nav-logo:hover img, .theme-toggle:hover, .theme-toggle:active, .back-to-top:active,
+  .post-item:hover .post-item-title, .cat-tree li a:hover,
+  .archive-list li:hover, .bio-row .avatar:hover, .about-avatar:hover,
+  .intro-section > nav a:hover, .about-card nav a:hover,
+  .site-footer nav a:hover, .post-nav a:hover,
+  .back-to-top:is(:hover, :focus-visible) svg { transform: none; }
+  ::view-transition-old(root), ::view-transition-new(root) { animation: none; }
+}
+@media print {
+  [data-reveal] { opacity: 1; translate: none; animation: none; }
+  .reading-progress, .back-to-top, .skip-link { display: none; }
+  .hero-frame, .hero-frame .hero { transform: none; }
+}

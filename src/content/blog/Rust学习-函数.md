@@ -11,7 +11,15 @@ fn add(i:i32,j:i32)->i32{
 	i+j
 }
 ```
+
+
+
+
 <img src="/posts/assets/2is4m-Pasted-image-20260720110938.png" alt="Pasted image 20260720110938.png" loading="lazy" />
+
+
+
+
 **函数名和变量名**可采用**蛇形命名法**,`fn add_two()->{}`
 ## 函数参数
 rust是静态类型语言，因此需要为每一个函数参数标识出它的具体类型
@@ -81,6 +89,15 @@ fn add(x:u32,y:u32)->u32{
 	x+y;  
 }
 ```
+```
+  |
+1 | fn add(x:i32, y:i32) -> i32 {
+  |    ---                  ^^^ expected `i32`, found `()`
+  |    |
+  |    implicitly returns `()` as its body has no tail or `return` expression
+2 |     x + y;
+  |          - help: remove this semicolon to return this value
+```
 ### 永不返回的发散函数`!`
 当用`!`作函数返回类型的时候，表示该函数永不返回。特别的，这种语法往往会导致程序崩溃的函数:
 ```rust
@@ -96,4 +113,3 @@ fn forever()->!{
 	};
 }
 ```
-## Rust by Practice

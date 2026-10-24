@@ -25,7 +25,15 @@ $$
 $$
 O_{t}=H_{t}W_{hq}+b_{q}
 $$
+
+
+
+
 <img src="/posts/assets/16i4kc6-rnn.svg" alt="rnn.svg" loading="lazy" />
+
+
+
+
 - 隐状态的计算:
 拼接当前时间步的输入$X_t$和前一时间步t-1的隐状态$H_{t-1}$
 - 将拼接的结果送入带有激活函数$\phi$的全连接层，全连接层的输出是当前时间步t的隐状态$h_t$
@@ -39,7 +47,15 @@ torch.matmul(X,W_xh)+torch.matmul(H,W_hh)
 torch.matmul(torch.cat(X,H),1),torch.cat((W_xh,W_hh),0
 ```
 ### 基于循环神经网络的字符集语言模型
-<img src="/posts/assets/4ytiab-rnn-train.svg" alt="rnn-train.svg" loading="lazy" />训练过程中，对于每个时间步的输出层的输出进行softmax操作，让后利用交叉熵损失计算模型输出和标签之间的误差
+
+
+
+
+<img src="/posts/assets/4ytiab-rnn-train.svg" alt="rnn-train.svg" loading="lazy" />
+
+
+
+训练过程中，对于每个时间步的输出层的输出进行softmax操作，让后利用交叉熵损失计算模型输出和标签之间的误差
 
 ### Perplexity(困惑度)
 讨论如何度量语言模型的质量，用于评估模型

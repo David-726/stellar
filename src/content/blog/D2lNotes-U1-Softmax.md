@@ -40,7 +40,9 @@ $$
 这里，对于所有的$j$总有$0 \leq \hat{y}_j \leq 1$。 因此，$\hat{\mathbf{y}}$可以视为一个正确的概率分布。
 $$
 \operatorname*{argmax}_j \hat y_j = \operatorname*{argmax}_j o_j.
-$$尽管softmax是一个非线性函数，但softmax回归的输出仍然由输入特征的仿射变换决定。 因此，softmax回归是一个**线性模型**
+$$
+
+尽管softmax是一个非线性函数，但softmax回归的输出仍然由输入特征的仿射变换决定。 因此，softmax回归是一个**线性模型**
 **注意softmax是一个线性模型**故不能用于激活函数
 
 ### 小批量样本的矢量化

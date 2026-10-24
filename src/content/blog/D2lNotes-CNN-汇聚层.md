@@ -11,7 +11,15 @@ draft: false
 更常见的叫法应该是池化层
 一般最常见的是最大池化层和平均池化层
 同conv kernel一样，从左到右，从上到下的滑动，取最值或者均值
-<img src="/posts/assets/18nm673-pooling.svg" alt="pooling.svg" loading="lazy" />下面实现1个`pool2d`函数，实现汇聚层的前向传播
+
+
+
+
+<img src="/posts/assets/18nm673-pooling.svg" alt="pooling.svg" loading="lazy" />
+
+
+
+下面实现1个`pool2d`函数，实现汇聚层的前向传播
 ```python
 import torch
 from torch import nn

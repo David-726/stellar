@@ -7,7 +7,15 @@ draft: false
 ---
 # AlexNet
 2012年,AlexNet横空出世
-<img src="/posts/assets/1yuvngz-alexnet.svg" alt="alexnet.svg" loading="lazy" />AlexNet通过暂退法控制全连接层的模型复杂度，LeNet只用了权重衰减,且AlexNet在训练时加入了大量的图像增强数据，使得模型更为健壮
+
+
+
+
+<img src="/posts/assets/1yuvngz-alexnet.svg" alt="alexnet.svg" loading="lazy" />
+
+
+
+AlexNet通过暂退法控制全连接层的模型复杂度，LeNet只用了权重衰减,且AlexNet在训练时加入了大量的图像增强数据，使得模型更为健壮
 ```python
 import torch
 from torch import nn

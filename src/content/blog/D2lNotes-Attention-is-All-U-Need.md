@@ -5,7 +5,31 @@ description: ""
 tags: ["注意力机制"]
 draft: false
 ---
-<img src="/posts/assets/bkl0n0-Pasted-image-20260831184444.png" alt="Pasted image 20260831184444.png" loading="lazy" /><img src="/posts/assets/bkl0n0-Pasted-image-20260831184441.png" alt="Pasted image 20260831184441.png" loading="lazy" /><img src="/posts/assets/163gjzi-Pasted-image-20260831184203.png" alt="Pasted image 20260831184203.png" loading="lazy" />### 注意力机制
+
+
+
+
+<img src="/posts/assets/bkl0n0-Pasted-image-20260831184444.png" alt="Pasted image 20260831184444.png" loading="lazy" />
+
+
+
+
+
+
+
+<img src="/posts/assets/bkl0n0-Pasted-image-20260831184441.png" alt="Pasted image 20260831184441.png" loading="lazy" />
+
+
+
+
+
+
+
+<img src="/posts/assets/163gjzi-Pasted-image-20260831184203.png" alt="Pasted image 20260831184203.png" loading="lazy" />
+
+
+
+### 注意力机制
 ### Q K V
 Q(Query)、K(Key)、V(Value)
 #### RNN中的QK
@@ -13,9 +37,25 @@ RNN中的注意力机制：Q就是当前Decoder时间步输入的隐状态，V�
 RNN中计算Q和K的值，是通过将Q和K向量进行拼接，然后经过1个神经网络，输出一个值。1个Q和一组K分别计算，得到1组logits,这一组logits再经过softmax,得到这一个Q和一组K的注意力权重
 
 ### Transformer中的注意力机制
-*Transformer*中，直接计算Q和K的点乘<img src="/posts/assets/otr5xp-Pasted-image-20260830211123.png" alt="Pasted image 20260830211123.png" loading="lazy" />在不同的句子中 一个Token的Embedding是不同的
+*Transformer*中，直接计算Q和K的点乘
+
+
+
+<img src="/posts/assets/otr5xp-Pasted-image-20260830211123.png" alt="Pasted image 20260830211123.png" loading="lazy" />
+
+
+
+在不同的句子中 一个Token的Embedding是不同的
 #### 自注意力机制
-<img src="/posts/assets/1w2s1c5-Pasted-image-20260830211222.png" alt="Pasted image 20260830211222.png" loading="lazy" />首先定义3个FNN，为每个token都生成各自的q、k、v向量。全连接层的输入都是当前的Embedding。有了当前的qkv向量就可以按章上面的方式进行注意力计算
+
+
+
+
+<img src="/posts/assets/1w2s1c5-Pasted-image-20260830211222.png" alt="Pasted image 20260830211222.png" loading="lazy" />
+
+
+
+首先定义3个FNN，为每个token都生成各自的q、k、v向量。全连接层的输入都是当前的Embedding。有了当前的qkv向量就可以按章上面的方式进行注意力计算
 
 苹果这个token,用自己的q向量和所有的token(包括自身)的k向量进行点积计算，得到1组A
 $$
@@ -37,9 +77,25 @@ $$
 **为了保证更新前后每个token的Embedding维度不变**,假如注意力有N个头，那么每个头的qkv的维度就为原始token Embedding的1/N,最后N个头进行注意力计算后的输出拼接，Embedding的维度就保持不变了
 #### 矩阵运算加速
 Transformer一个重大优势是:**可以同时更新所有的token的embedding**,不用像RNN计算每个token的隐状态需要等待前面token依次计算出各自的隐状态
-<img src="/posts/assets/mcgxpb-Pasted-image-20260830213148.png" alt="Pasted image 20260830213148.png" loading="lazy" />又有**GPU极其擅长矩阵运算**:
+
+
+
+
+<img src="/posts/assets/mcgxpb-Pasted-image-20260830213148.png" alt="Pasted image 20260830213148.png" loading="lazy" />
+
+
+
+又有**GPU极其擅长矩阵运算**:
 qkv的向量维度和embedding向量的维度都一样，为hidden_size,所以将序列内所有token产生的q向量合并在一起，形成一个Q矩阵[seq_len,hidden_size],K矩阵形状为[seq_len,hidden_size]又V矩阵[seq_len,hidden_size]，Q乘以K的转置得到的结果的形状为:[seq_len,seq_len],然后softmax之后就得到了注意力权重矩阵
-<img src="/posts/assets/1eh6fvz-Pasted-image-20260830213828.png" alt="Pasted image 20260830213828.png" loading="lazy" />其中结果的第一行表示第一个token和序列里每个token注意力权重的值。第n行的每个值表示序列里第n个token和序列所有token计算的注意力权重值。
+
+
+
+
+<img src="/posts/assets/1eh6fvz-Pasted-image-20260830213828.png" alt="Pasted image 20260830213828.png" loading="lazy" />
+
+
+
+其中结果的第一行表示第一个token和序列里每个token注意力权重的值。第n行的每个值表示序列里第n个token和序列所有token计算的注意力权重值。
 然后这个注意力权重矩阵再与V相乘得到这个注意力层的输出，也就是对序列所有token根据上下文，应用注意力机制更新后的embedding:
 $$
 Attention(Q,K,V)=softmax(QK^{T})V
@@ -52,7 +108,15 @@ $d_k$就是特征维度hidden_size
 >YesButWhy?
 >特征维度是一个超参数，可以调节，如果特征值分布一致，特征维度越大，那么2个特征向量点乘后的softmax分布十分尖锐，注意力集中再几个token上，其他token的信息就利用不上
 
-<img src="/posts/assets/11pnfvi-Pasted-image-20260830214608.png" alt="Pasted image 20260830214608.png" loading="lazy" />Transformer在为每个token生成q,k,v向量时，生成的维度和embedding的维度是一致的，然后再按头的个数划分为多个q,k,v，代表每个头的q,k,v。
+
+
+
+
+<img src="/posts/assets/11pnfvi-Pasted-image-20260830214608.png" alt="Pasted image 20260830214608.png" loading="lazy" />
+
+
+
+Transformer在为每个token生成q,k,v向量时，生成的维度和embedding的维度是一致的，然后再按头的个数划分为多个q,k,v，代表每个头的q,k,v。
 整个序列的4个token进行多注意力计算时就是Head1Head2Head3的QKV矩阵进行计算，分别得到结果矩阵，再将矩阵进行拼接，得到了4个token的Embedding
 $$
 Attention(Q,K,V)=concat(Attention(Q_{h1},K_{h1},V_{h1}),Attention{Q_{h2},K_{h2},V_{h2}}),Attention(Q_{h3},K_{h3},V_{h3}))
@@ -137,9 +201,25 @@ class LayerNormaliztion(nn.Module):
 #### Sin函数位置编码
 
 
-<img src="/posts/assets/bkl0n0-Pasted-image-20260831184453.png" alt="Pasted image 20260831184453.png" loading="lazy" />可以通过调整波长，来决定函数随时变的快慢。因此可以用sin函数来做位置编码；低维度用波长短的sin函数这样值变化快；高维度用波长长的sin函数，这样值变化慢
+
+
+
+
+<img src="/posts/assets/bkl0n0-Pasted-image-20260831184453.png" alt="Pasted image 20260831184453.png" loading="lazy" />
+
+
+
+可以通过调整波长，来决定函数随时变的快慢。因此可以用sin函数来做位置编码；低维度用波长短的sin函数这样值变化快；高维度用波长长的sin函数，这样值变化慢
 **对于一个512维的位置编码，我们可以如下定义：**
-<img src="/posts/assets/md6dcj-Pasted-image-20260831184739.png" alt="Pasted image 20260831184739.png" loading="lazy" />上图中偶数位置用sin函数系数$w_{2i}$表示，奇数位置用$w_{2i+1}$表示
+
+
+
+
+<img src="/posts/assets/md6dcj-Pasted-image-20260831184739.png" alt="Pasted image 20260831184739.png" loading="lazy" />
+
+
+
+上图中偶数位置用sin函数系数$w_{2i}$表示，奇数位置用$w_{2i+1}$表示
 $$
 \begin{align}
 w_{2i}&=\frac{1}{10000^{\frac{2i}{features\_size}}}\\
@@ -181,9 +261,25 @@ class PositionalEncoding(nn.Module):
 ```
 
 ### Transformer
+
+
+
+
 <img src="/posts/assets/9bw35-Pasted-image-20260831190310.png" alt="Pasted image 20260831190310.png" loading="lazy" />
+
+
+
+
 #### Encoder
-<img src="/posts/assets/1h14x72-Pasted-image-20260831190341.png" alt="Pasted image 20260831190341.png" loading="lazy" />Inputs->Embedding->N个Encoder Block
+
+
+
+
+<img src="/posts/assets/1h14x72-Pasted-image-20260831190341.png" alt="Pasted image 20260831190341.png" loading="lazy" />
+
+
+
+Inputs->Embedding->N个Encoder Block
 EncoderBlock:
 多头注意力->残差链接->Layer Norm->FNN->残差连接->Layer Norm
 全连接模块实现:
@@ -238,11 +334,27 @@ class Encoder(nn.Module):
 ```
 
 #### Decoder
-<img src="/posts/assets/9bw35-Pasted-image-20260831192641.png" alt="Pasted image 20260831192641.png" loading="lazy" />Decoder的输入:
+
+
+
+
+<img src="/posts/assets/9bw35-Pasted-image-20260831192641.png" alt="Pasted image 20260831192641.png" loading="lazy" />
+
+
+
+Decoder的输入:
 - 含有上下文信息的编码器的输出的token Embedding
 - 已经翻译好的token序列
 在训练时，由于我们已经知道英文对应的中文token序列，所以可以通过一种叫做**带掩码的多头注意力机制**来实现并行化训练
-<img src="/posts/assets/2xj8-Pasted-image-20260831194223.png" alt="Pasted image 20260831194223.png" loading="lazy" />对于"我爱吃苹果"这个序列，可以构造1个下三角矩阵:
+
+
+
+
+<img src="/posts/assets/2xj8-Pasted-image-20260831194223.png" alt="Pasted image 20260831194223.png" loading="lazy" />
+
+
+
+对于"我爱吃苹果"这个序列，可以构造1个下三角矩阵:
 Transformer中只有注意力计算是跨token，根据上下文更新自身embedding的；进行注意力计算时，除传入qkv之外，还需要传入这个Mask MaTrix
 实际代码实现时，先利用QK矩阵进行注意力计算，softmax()之前，吧Mask矩阵为0的注意力结果填充为1个很大的负值，softmax之后就是0
 ```python

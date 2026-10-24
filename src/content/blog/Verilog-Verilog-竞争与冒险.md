@@ -139,7 +139,15 @@ end
 
 ## Verilog Latch
 **Whats Latch**
-Latch(锁存器)->电平触发的存储单元，数据存储的动作取决于输入时钟信号的电平值，锁存器使能时，<img src="/posts/assets/1rpz68t-Pasted-image-20260819120814.png" alt="Pasted image 20260819120814.png" loading="lazy" />输出才会随着数据输入变化。
+Latch(锁存器)->电平触发的存储单元，数据存储的动作取决于输入时钟信号的电平值，锁存器使能时，
+
+
+
+<img src="/posts/assets/1rpz68t-Pasted-image-20260819120814.png" alt="Pasted image 20260819120814.png" loading="lazy" />
+
+
+
+输出才会随着数据输入变化。
 Latch的危害:
 - 输入状态可能多次变化，容易产生毛刺，增加了下一级电路的不确定性
 - 大部分FPGA资源中，可能需要比触发器更多的资源实现Latch结构

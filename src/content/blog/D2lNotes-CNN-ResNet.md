@@ -19,7 +19,15 @@ draft: false
 让新增层学习“残差”
 而不是重新学习完整函数
 ### 残差块
+
+
+
+
 <img src="/posts/assets/q0qcub-residual-block.svg" alt="residual-block.svg" loading="lazy" />
+
+
+
+
 ```python
 import torch
 from torch import nn
@@ -46,7 +54,15 @@ class Residual(nn.Module):
 		return F.relu(Y)
 	
 ```
+
+
+
+
 <img src="/posts/assets/1llkpdm-resnet-block-1.svg" alt="resnet-block 1.svg" loading="lazy" />
+
+
+
+
 ```python
 blk = Residual(3,3)
 X = torch.rand(4,3,6,6)
@@ -84,7 +100,15 @@ b5 = nn.Sequential(*resnet_block(256,512,2))
 ```python
 net = nn.Sequential(b1,b2,b3,b4,b5,nn.AdaptiveAvgPool2d((1,1)),nn.Flatten(),nn.Linear(512,10))
 ```
+
+
+
+
 <img src="/posts/assets/12gpbsn-resnet18-1.svg" alt="resnet18 1.svg" loading="lazy" />
+
+
+
+
 ```python
 X = torch.rand(size=(1,1,224,224))
 for layer in net:

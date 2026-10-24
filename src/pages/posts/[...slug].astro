@@ -1,6 +1,7 @@
 ---
 import { getCollection, render } from "astro:content";
 import Base from "../../layouts/Base.astro";
+import "katex/dist/katex.min.css";
 
 export async function getStaticPaths() {
   const posts = await getCollection("blog", ({ data }) => !data.draft);
@@ -17,16 +18,18 @@ const fmt = (d: Date) =>
   d.toLocaleDateString("zh-CN", { year: "numeric", month: "long", day: "numeric" });
 ---
 
-<Base title={post.data.title} description={post.data.description}>
+<Base title={post.data.title} description={post.data.description} readingProgress>
   <article>
     <header class="article-header">
       <ul class="article-metadata">
-        <li><time>{fmt(post.data.published)}</time></li>
+        <li><time datetime={post.data.published.toISOString()}>{fmt(post.data.published)}</time></li>
         {post.data.tags.length > 0 && <li>{post.data.tags.join(", ")}</li>}
       </ul>
       <h1>{post.data.title}</h1>
     </header>
-    <Content />
+    <div class="article-body" data-article-body>
+      <Content />
+    </div>
   </article>
   <div class="post-nav">
     <a href="/">← 首页</a>

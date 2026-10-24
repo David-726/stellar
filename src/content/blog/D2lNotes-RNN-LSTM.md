@@ -6,7 +6,15 @@ tags: ["RNN"]
 draft: false
 ---
 ### LSTM
+
+
+
+
 <img src="/posts/assets/7p6etz-lstm-3.svg" alt="lstm-3.svg" loading="lazy" />
+
+
+
+
 ForgettenGate、InputGate、OutputGate
 上方时Long-TermMemory、下方是Short-TermMemory
 多看几遍理解一下

@@ -28,9 +28,25 @@ $P(y=i)=\frac{e^{z_{i}}}{\sum){j=0}^{K-1}e^{z_{j}}}$
 
 **分母求和保证结果为1
 #### Softmax Layer -Example
+
+
+
+
 <img src="/posts/assets/1qe796j-Pasted-image-20260426135251.png" alt="Pasted image 20260426135251.png" loading="lazy" />
+
+
+
+
 #### Loss function-Cross Entropy
+
+
+
+
 <img src="/posts/assets/1x0qujf-Pasted-image-20260426135749.png" alt="Pasted image 20260426135749.png" loading="lazy" />
+
+
+
+
 将softmax的输出转化为独热编码one-hot code形式
 $Loss(\hat Y,Y)=-Ylog(\hat Y)$
 ```python

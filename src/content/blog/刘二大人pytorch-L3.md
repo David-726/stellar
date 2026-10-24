@@ -12,7 +12,15 @@ $\hat y=x*w$
 **optimization Problem
 优化问题
 #### Gradient Descent Algorithm 梯度下降
+
+
+
+
 <img src="/posts/assets/1a2w317-Pasted-image-20260417184954.png" alt="Pasted image 20260417184954.png" loading="lazy" />
+
+
+
+
 Grandient $\frac{\partial cost}{\partial w}$
 Update $w=w-\alpha\frac{\partial cost}{\partial w}$
 每一次迭代都朝向下降最快的方向走一步

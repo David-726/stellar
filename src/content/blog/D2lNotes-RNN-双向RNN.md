@@ -6,12 +6,28 @@ tags: ["RNN"]
 draft: false
 ---
 ### 隐马尔可夫模型中的动态规划
-<img src="/posts/assets/18abuaw-hmm.svg" alt="hmm.svg" loading="lazy" />对于有$T$个观测值的序列，在观测状元和隐状态上具有的联合概率分布:
+
+
+
+
+<img src="/posts/assets/18abuaw-hmm.svg" alt="hmm.svg" loading="lazy" />
+
+
+
+对于有$T$个观测值的序列，在观测状元和隐状态上具有的联合概率分布:
 $$
 P(x_1,...,x_T,h_1,...,h_T)=\sum_{t=1}^{T}P(h_t|h_{t-1})P(x_t|h_t),whereP(h_1|h_0)=P(h_1)
 $$
 ### 双向模型
-<img src="/posts/assets/rclrpd-birnn.svg" alt="birnn.svg" loading="lazy" />在原本的基础上加一个从最后一个词元开始从后向前运行的循环神经网络
+
+
+
+
+<img src="/posts/assets/rclrpd-birnn.svg" alt="birnn.svg" loading="lazy" />
+
+
+
+在原本的基础上加一个从最后一个词元开始从后向前运行的循环神经网络
 #### 定义
 $$
 \begin{align}

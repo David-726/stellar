@@ -15,7 +15,15 @@ draft: false
 ### DataSets
  Machine Learning 在Datasets中找到我们想要的算法
 ### Deeplearning
+
+
+
+
 <img src="/posts/assets/19r5ayx-Pasted-image-20260415223219.png" alt="Pasted image 20260415223219.png" loading="lazy" />
+
+
+
+
 
 >跟面积无关
 
@@ -25,7 +33,7 @@ $F(x) = \int f(x) \, dx$也就是所说的 rule-based system
 
 因为对于一些特定的fx的原函数 有一定的规则,例如
 $\int f(x)+g(x)\,dx=\int f(x)\,dx+\int g(x)\,dx$
-Drawing 2026-04-15 22.36.16.excalidraw
+<a href="/posts/assets/1c0db9f750313fe2-Drawing-2026-04-15-22.36.16.excalidraw.md" download>手绘图源文件：Drawing 2026-04-15 22.36.16.excalidraw</a>
 >基于规则的程序也属于人工智能程序
 
 **rule-based systems 中最重要的是图中的Hand-designde porgram
@@ -48,7 +56,15 @@ features的数量越多 也就是说维度越高对于数据的需求越大
 **Deeplearning和presentationlearning的区别:原来的特征提取器和学习器是分开的 而DL则不是**
 ### Rule-based systemVS Representation system
 **Rule-based system就是基于rule Rs则是Training from data**
+
+
+
+
 <img src="/posts/assets/1sonbys-Pasted-image-20260415232203.png" alt="Pasted image 20260415232203.png" loading="lazy" />
+
+
+
+
 
 
 - limit of hand-designed features
@@ -58,7 +74,7 @@ features的数量越多 也就是说维度越高对于数据的需求越大
 ### Back Porpagation
 将每一层的偏导数存下来 
 **计算图**
-Drawing 2026-04-16 12.34.28.excalidraw
+<a href="/posts/assets/ef48a2c4059935de-Drawing-2026-04-16-12.34.28.excalidraw.md" download>手绘图源文件：Drawing 2026-04-16 12.34.28.excalidraw</a>
 $e=(a+b)*(c+d)$ 链式法则
 >原子计算
 

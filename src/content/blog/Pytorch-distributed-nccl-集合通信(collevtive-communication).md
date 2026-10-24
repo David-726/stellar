@@ -19,7 +19,15 @@ NCCL支持集合通信操作:
 - `ReduceScatter`,进程组内所有进程先进行reduce操作，在进行scatter操作，每个进程都得到Tensor的一部分
 - `AllGather`,进程组内所有进程的Tensor聚合到一个Tensor列表，并且最终所有进程都有1个Tensor列表副本
 ### scatter
-<img src="/posts/assets/ooz1ti-Pasted-image-20260905122157.png" alt="Pasted image 20260905122157.png" loading="lazy" />将一个scatter_list拆分到其他节点上
+
+
+
+
+<img src="/posts/assets/ooz1ti-Pasted-image-20260905122157.png" alt="Pasted image 20260905122157.png" loading="lazy" />
+
+
+
+将一个scatter_list拆分到其他节点上
 ```python
 def dist_scatter():
 	dist.barrier()
@@ -39,7 +47,15 @@ def dist_scatter():
 	logging.info(f"broadcast,rank:{rank},before scatter:{repr(before_tensor)} after scatter:{repr(tensor)}")
 ```
 ### gather
-<img src="/posts/assets/ebwnzx-Pasted-image-20260905122915.png" alt="Pasted image 20260905122915.png" loading="lazy" />将分散的gather到同一个list中，归到同一个rank
+
+
+
+
+<img src="/posts/assets/ebwnzx-Pasted-image-20260905122915.png" alt="Pasted image 20260905122915.png" loading="lazy" />
+
+
+
+将分散的gather到同一个list中，归到同一个rank
 ```python
 def dist_gather():
 	dist.barrier()
@@ -58,7 +74,15 @@ if rank == 0 else None
 		dist.barrier()
 ```
 ### broadcast
-<img src="/posts/assets/1npqn9m-Pasted-image-20260905123520.png" alt="Pasted image 20260905123520.png" loading="lazy" />就是简单的传统意义上的广播
+
+
+
+
+<img src="/posts/assets/1npqn9m-Pasted-image-20260905123520.png" alt="Pasted image 20260905123520.png" loading="lazy" />
+
+
+
+就是简单的传统意义上的广播
 ```python
 def dist_boradcast():
 	dist.barrier()
@@ -75,7 +99,15 @@ def dist_boradcast():
 ```
 
 ### reduce
+
+
+
+
 <img src="/posts/assets/neumca-Pasted-image-20260905124055.png" alt="Pasted image 20260905124055.png" loading="lazy" />
+
+
+
+
 默认的reduce操作时SUM(还可以有MAX,MIN等等操作)
 ```python
 def dist_reduce():
@@ -93,7 +125,15 @@ def dist_reduce():
 	dist.barrier()
 ```
 ### all-reduce
-<img src="/posts/assets/jfvghy-Pasted-image-20260905124659.png" alt="Pasted image 20260905124659.png" loading="lazy" />- `reduce`+`broadcast`
+
+
+
+
+<img src="/posts/assets/jfvghy-Pasted-image-20260905124659.png" alt="Pasted image 20260905124659.png" loading="lazy" />
+
+
+
+- `reduce`+`broadcast`
 ```python
 def dist_allreduce():
 	dist.barrier()
@@ -112,7 +152,15 @@ def dist_allreduce():
 	dist.barrier()
 ```
 ### all gather
+
+
+
+
 <img src="/posts/assets/hbyd3z-Pasted-image-20260905125056.png" alt="Pasted image 20260905125056.png" loading="lazy" />
+
+
+
+
 ```python
 def dist_allgather():
 	print_rank_0("allgather:")
@@ -128,7 +176,15 @@ def dist_allgather():
 	dist.barrier()
 ```
 ### reduce-scatter
-<img src="/posts/assets/1t6gfig-Pasted-image-20260905125749.png" alt="Pasted image 20260905125749.png" loading="lazy" />先reduce再scatter
+
+
+
+
+<img src="/posts/assets/1t6gfig-Pasted-image-20260905125749.png" alt="Pasted image 20260905125749.png" loading="lazy" />
+
+
+
+先reduce再scatter
 ```python
 def dist_reducescatter():
 	dist.barrier()

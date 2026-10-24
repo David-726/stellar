@@ -22,7 +22,7 @@ $\frac{\partial loss}{\partial w}=2*x_m*(x_n*w-y_n)$
 #### Computational Graph
 $\hat y =W_2*(W_1*X+b_1)+b_2$
 $H^{(1)}=W_1^{T}*X$
-Drawing 2026-04-17 23.19.30.excalidraw
+<a href="/posts/assets/273297617518b8fe-Drawing-2026-04-17-23.19.30.excalidraw.md" download>手绘图源文件：Drawing 2026-04-17 23.19.30.excalidraw</a>
 >Book->Martix cookbook
 
 $\hat y=W_2*(W-1*X+b_1)+b_2=W_2*W_1*X+(W_2*b_1+b2)=W*X+b$
@@ -33,14 +33,38 @@ $\hat y=W_2*(W-1*X+b_1)+b_2=W_2*W_1*X+(W_2*b_1+b2)=W*X+b$
 #### Composition of functions and Chain Rules
 **Chain rules
 $\frac{dy}{dx}=\frac{dy}{du}*\frac{du}{dx}$
-Drawing 2026-04-18 16.29.26.excalidraw
+<a href="/posts/assets/9411e31901ccc14e-Drawing-2026-04-18-16.29.26.excalidraw.md" download>手绘图源文件：Drawing 2026-04-18 16.29.26.excalidraw</a>
+
+
+
+
 <img src="/posts/assets/16t1nsk-Pasted-image-20260418163545.png" alt="Pasted image 20260418163545.png" loading="lazy" />
+
+
+
+
 **有同学可能说$\frac{\partial L}{\partial w}$并没有什么需求 但是要是这里的x是一个中间变量**
+
+
+
+
 <img src="/posts/assets/1pthsjo-Pasted-image-20260418163659.png" alt="Pasted image 20260418163659.png" loading="lazy" />
+
+
+
+
 
 **Computational Graph of Linear Model**
 $loss=(\hat y-y)^2=(x*w-y)^2$
+
+
+
+
 <img src="/posts/assets/g7dlpz-Pasted-image-20260418164111.png" alt="Pasted image 20260418164111.png" loading="lazy" />
+
+
+
+
 **Practice:
 - x= 2，y=4 重新计算反向传播
 - Affine Model : $\hat y=x*w+b$
@@ -84,7 +108,15 @@ print("predict (after training)",4,forwarda(4).item())
 ```
 **我们每调用一次loss函数 就将这个计算图动态构建出来 因而每次看见这个代码 就能够构建一次这个计算图 
 但是每一次backward时候就会将计算图释放掉而去准备下一次的图 因而下一次调用loss函数时会创建一个新的计算图 这是一个非常灵活的方式 也是pytorch的核心竞争力**
+
+
+
+
 <img src="/posts/assets/byy5r3-Pasted-image-20260418225231.png" alt="Pasted image 20260418225231.png" loading="lazy" />
+
+
+
+
 ```
 sum=0
 sum+=l

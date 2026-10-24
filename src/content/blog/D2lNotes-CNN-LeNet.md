@@ -8,7 +8,15 @@ draft: false
 # LeNet
 - 卷积
 - 全连接层密集块
-<img src="/posts/assets/1y162tj-lenet.svg" alt="lenet.svg" loading="lazy" />每个卷积块中的基本单元是一个卷积层一个sigmoid函数和平均池化层。每个卷积层用5\*5卷积核和一个sigmoid激活函数。这些层将输入映射到多个二位特征输出，通常同时增加通道数
+
+
+
+
+<img src="/posts/assets/1y162tj-lenet.svg" alt="lenet.svg" loading="lazy" />
+
+
+
+每个卷积块中的基本单元是一个卷积层一个sigmoid函数和平均池化层。每个卷积层用5\*5卷积核和一个sigmoid激活函数。这些层将输入映射到多个二位特征输出，通常同时增加通道数
 为了将卷积块的输出传递给稠密块，必须在小批量展平每个样本
 flat->4维->2维:
 第1个维度索引小批量中的样本；

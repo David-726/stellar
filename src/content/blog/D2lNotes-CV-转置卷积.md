@@ -8,7 +8,15 @@ draft: false
 # 转置卷积
 - **卷积不会增大输入的高宽，通常要么不变、要么减半。>>padding 但是padding往往会带来一些无效信息
 - **转置卷积则可以用来增大输入高宽
+
+
+
+
 <img src="/posts/assets/1ls3zc3-Pasted-image-20260524104521.png" alt="Pasted image 20260524104521.png" loading="lazy" />
+
+
+
+
 $$
 \begin{align}
 Y[i:i+h,j:j+w]+=X[i,j].K

@@ -6,7 +6,15 @@ tags: ["D2lNotes"]
 draft: false
 ---
 ### 添加更多的隐藏层的RNN
+
+
+
+
 <img src="/posts/assets/gzeflc-deep-rnn.svg" alt="deep-rnn.svg" loading="lazy" />
+
+
+
+
 #### 函数依赖关系
 $$
 H_t^{(l)}=\phi_l(H_t^{(l-1)}W_{xh}^{(l)}+H_{t-1}^{(l)}W_{hh}^{(l)}+b_h^{(l)})

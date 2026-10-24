@@ -9,7 +9,15 @@ draft: false
 ## FIR滤波器远离
 有限长度 单位冲击响应滤波器
 直接型结构:
-<img src="/posts/assets/1qab4z6-Pasted-image-20260821185002.png" alt="Pasted image 20260821185002.png" loading="lazy" />$$
+
+
+
+
+<img src="/posts/assets/1qab4z6-Pasted-image-20260821185002.png" alt="Pasted image 20260821185002.png" loading="lazy" />
+
+
+
+$$
 y_{n}=h(n)*x(n)=\sum_{k=0}^{N-1}h(k)x(n-k)
 $$
 **傅里叶表示**

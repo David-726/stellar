@@ -289,7 +289,7 @@ for epoch in range(15):
 ### Embedding in Pytorch
 
 #### Using embedding  and linear layer
-Drawing 2026-05-07 22.34.53.excalidraw
+<a href="/posts/assets/78001a1d404ee04c-Drawing-2026-05-07-22.34.53.excalidraw.md" download>手绘图源文件：Drawing 2026-05-07 22.34.53.excalidraw</a>
 ```python
 class Model(torch.nn.Module):
 	def __init__(self):
@@ -321,7 +321,7 @@ batch_size=1
 seq_len=5
 
 idx2char=['e','h','l','o']
-x_data=1,0,2,2,3#(batch,seq_Len)
+x_data=[[1,0,2,2,3]]#(batch,seq_Len)
 y_data=[3,1,2,3,2]#(batch*seq_len)
 
 inputs=torch.LongTensor(x_data)
@@ -346,4 +346,3 @@ for epoch in range(15):
 
 ### Exercise 12-1 Using LSTM
 >读取文档了解什么是LSTM
-

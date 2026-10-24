@@ -9,7 +9,15 @@ draft: false
 ### Inception块
 GoogLeNet中，基本的卷积块被称之`Inception Block`
 We Need To Go Deeper
-<img src="/posts/assets/o3q77i-inception.svg" alt="inception.svg" loading="lazy" />**神之配比**:
+
+
+
+
+<img src="/posts/assets/o3q77i-inception.svg" alt="inception.svg" loading="lazy" />
+
+
+
+**神之配比**:
 ```python
 import torch
 from torch import nn
@@ -35,7 +43,15 @@ class Inception(nn.Module):
 ```
 
 ### GoogLeNet模型
-<img src="/posts/assets/vblmtd-inception-full.svg" alt="inception-full.svg" loading="lazy" />穷人靠变异，富人靠科技
+
+
+
+
+<img src="/posts/assets/vblmtd-inception-full.svg" alt="inception-full.svg" loading="lazy" />
+
+
+
+穷人靠变异，富人靠科技
 ```python
 b1 = nn.Sequential(nn.Conv2d(1,64,kernel_size=7,stride=2,padding=3),nn.ReLU(),nn.MaxPool2d(kernel_size=3,stride=2,padding=1))
 ```

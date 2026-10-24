@@ -17,7 +17,9 @@ const fmt = (d: Date) =>
     <Sidebar />
     <div class="content-main">
       <div class="intro-section">
-        <img class="hero" src="/assets/images/hero.webp" alt="hero" width="1320" height="743" />
+        <div class="hero-frame">
+          <img class="hero" data-hero-image src="/assets/images/hero.webp" alt="" width="1320" height="743" fetchpriority="high" />
+        </div>
         <div class="bio-row">
           <img class="avatar" src="/assets/images/avatar.gif" alt={SITE.author} width="56" height="56" />
           <div>
@@ -39,13 +41,13 @@ const fmt = (d: Date) =>
       <div class="post-list">
         <h2 class="section-label">Posts</h2>
         {
-          posts.map((post, i) => (
-            <div class="post-item" style={`animation-delay:${0.08 * i + 0.15}s`}>
+          posts.map((post) => (
+            <div class="post-item">
               <p class="post-item-title">
                 <a href={`/posts/${post.id}/`}>{post.data.title}</a>
               </p>
               <p class="post-item-meta">
-                <time>{fmt(post.data.published)}</time>
+                <time datetime={post.data.published.toISOString()}>{fmt(post.data.published)}</time>
                 {post.data.tags.length > 0 && <span> · {post.data.tags.join(", ")}</span>}
               </p>
             </div>

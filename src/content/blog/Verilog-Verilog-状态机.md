@@ -13,15 +13,39 @@ draft: false
 输出只与当前状态有关，与当前输入无关
 输入对输出的影响要在下一个时钟周期才能反映出来，输出在一个完整的时钟周期内保持稳定，即使此时输入变化，输出也不会变化。
 **输入与输出是隔离开的**
+
+
+
+
 <img src="/posts/assets/1q824d-Pasted-image-20260819105200.png" alt="Pasted image 20260819105200.png" loading="lazy" />
+
+
+
+
 ### Melay 状态机
 输出不仅与当前状态有关，还和当前的输入信号有关
 状态机的输出是在输入信号变化后立刻发生变化，且输入变化可能出现在任何时刻的时钟周期内。
 `Mealy`状态机比`Moore`状态机早一个时钟周期
-<img src="/posts/assets/1s0j8p1-Pasted-image-20260819105403.png" alt="Pasted image 20260819105403.png" loading="lazy" />根据设计需求画出状态转移图，确定使用状态机类型，并标注出各种输入输出信号，更有助于编程
+
+
+
+
+<img src="/posts/assets/1s0j8p1-Pasted-image-20260819105403.png" alt="Pasted image 20260819105403.png" loading="lazy" />
+
+
+
+根据设计需求画出状态转移图，确定使用状态机类型，并标注出各种输入输出信号，更有助于编程
 一般的使用最多的就是:Mealy型3段式状态机
 #### 自动贩卖机
-<img src="/posts/assets/ugqa2i-Pasted-image-20260819105602.png" alt="Pasted image 20260819105602.png" loading="lazy" />设计流程:
+
+
+
+
+<img src="/posts/assets/ugqa2i-Pasted-image-20260819105602.png" alt="Pasted image 20260819105602.png" loading="lazy" />
+
+
+
+设计流程:
 - 根据状态机的个数确定状态机编码，利用编码给状态寄存器赋值，代码可读性更好
 - 第一段:时序逻辑，非阻塞赋值，传递寄存器的状态
 - 第二段:组合逻辑，阻塞赋值，根据当前状态和当前输入，确定下一个状态机的状态

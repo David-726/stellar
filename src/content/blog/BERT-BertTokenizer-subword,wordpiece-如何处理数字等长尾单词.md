@@ -38,8 +38,8 @@ tokenizer.vocab['[UNK]']
 tokenizer.tokenize('bestselling')
 ```
 ```python
-for token,id in tokenizer.vocab:
-	if token.starswith('##'):
+for token,id in tokenizer.vocab.items():
+	if token.startswith('##'):
 		print(token)
 		cnt_sharp+=1
 print(cnt_sharp)
@@ -53,15 +53,10 @@ print(tokenizer.convert_ids_to_token(inputs['input_ids']))
 ```python
 tokenizer.decode(inputs['input_ids'])
 ```
-```python
-
-```
 ### summary
-- tokenizer 轻易不会吧一个词处理为'[UNK](100)'
+- tokenizer 轻易不会吧一个词处理为'`[UNK](100)`'
 - 基于词汇表,tokenizer,encode,decode一体
 	- tokenizer:word==>token(s),将word尽可能的映射为vocab中的keys
 	- encode:token==>id
 	- decode:id==>token==>word
 		- encode完了之后不是终点(word),decode还要能很好的将id还原，尽可能的与输入的word对齐
-
-

@@ -59,7 +59,15 @@ g_float32 = torch.mm(d_float32,f_float16.float())
 print('out autocast',g_float32.dtype,g_float32.device)
 ```
 ### basics:
+
+
+
+
 <img src="/posts/assets/1cq3sm8-Pasted-image-20260905132828.png" alt="Pasted image 20260905132828.png" loading="lazy" />
+
+
+
+
 - fp32(single precision)vsfp16(half precision)
 	- fp16的dynamic range是足够的,gradient(weight update)的计算将其scale避免fp16的浮点数下溢
 - fp16 is fast and memory-efficient:
@@ -77,7 +85,23 @@ update = torch.cuda.FloatTensor([.0001])
 para + update
 ```
 ### amp
-<img src="/posts/assets/1ygtlp0-Pasted-image-20260905133551.png" alt="Pasted image 20260905133551.png" loading="lazy" /><img src="/posts/assets/ykudex-Pasted-image-20260905133736.png" alt="Pasted image 20260905133736.png" loading="lazy" />
+
+
+
+
+<img src="/posts/assets/1ygtlp0-Pasted-image-20260905133551.png" alt="Pasted image 20260905133551.png" loading="lazy" />
+
+
+
+
+
+
+
+<img src="/posts/assets/ykudex-Pasted-image-20260905133736.png" alt="Pasted image 20260905133736.png" loading="lazy" />
+
+
+
+
 - forward:weights,activations
 - backward:activation grad,weighth grad
 - update(weight gradients 乘上学习率)会非常小，在FP16中，小于2^(-24)的数都会被置0

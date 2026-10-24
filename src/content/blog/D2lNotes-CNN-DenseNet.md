@@ -13,8 +13,24 @@ f(x)=f(0)+f'(0)x+\frac{f''(0)}{2!}x^{2}+...
 $$
 同样的`ResNet`:
 $$f(x)=x+g(x)$$
-<img src="/posts/assets/1306j-densenet-block.svg" alt="densenet-block.svg" loading="lazy" />一个简单的线性项和一个复杂的非线性项
-<img src="/posts/assets/1il5lnu-densenet.svg" alt="densenet.svg" loading="lazy" />`DenseNet`与`ResNet`的区别是:
+
+
+
+
+<img src="/posts/assets/1306j-densenet-block.svg" alt="densenet-block.svg" loading="lazy" />
+
+
+
+一个简单的线性项和一个复杂的非线性项
+
+
+
+
+<img src="/posts/assets/1il5lnu-densenet.svg" alt="densenet.svg" loading="lazy" />
+
+
+
+`DenseNet`与`ResNet`的区别是:
 `DenseNet`的输出是连接而不是直接相加:
 `DenseNet`主要由2部分组成：
 - `denseblock`

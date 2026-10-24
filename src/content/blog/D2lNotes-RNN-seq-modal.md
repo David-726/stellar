@@ -10,7 +10,15 @@ $$
 x_{t}\sim P(x_{t}|x_{t-1},...,x_{1})
 $$
 ### 自回归模型
-<img src="/posts/assets/7x9308-sequence-model.svg" alt="sequence-model.svg" loading="lazy" />整个序列的估计值都将通过以下方式获得:
+
+
+
+
+<img src="/posts/assets/7x9308-sequence-model.svg" alt="sequence-model.svg" loading="lazy" />
+
+
+
+整个序列的估计值都将通过以下方式获得:
 $$
 P(x_{1},...,x_{T})=\sum_{t=1}^{T}P(x_{t}|x_{t-1},...,x_{1})
 $$
@@ -46,7 +54,15 @@ x=torch.sin(0.01*time)+torch.normal(0,0.2,(T,))
 d2l.plot(time,[x],'time','x',xlim=[1,1000],figsize=(6,3))
 ```
 
-<img src="/posts/assets/1vklzoc-output_sequence_ce248f_6_0-1.svg" alt="output_sequence_ce248f_6_0 1.svg" loading="lazy" />接下来将改序列转换为模型的特征-标签对
+
+
+
+
+<img src="/posts/assets/1vklzoc-output_sequence_ce248f_6_0-1.svg" alt="output_sequence_ce248f_6_0 1.svg" loading="lazy" />
+
+
+
+接下来将改序列转换为模型的特征-标签对
 ```python
 tau = 4
 features = torch.zeros((T-tau,tau))

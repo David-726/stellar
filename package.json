@@ -8,6 +8,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "new-post": "node scripts/new-post.js",
+    "sync-notes": "node scripts/migrate-notes.js",
     "ship": "node scripts/ship.js"
   },
   "dependencies": {

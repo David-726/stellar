@@ -12,7 +12,15 @@ draft: false
 **Inception
 #### Inception Module:
 **引入:实际情况下我们不知道Kernel_size选择哪一个比较好用 因而我们在Googlenet的Inception Module块中我们都用一下 然后将几种卷积的结果摞在一起
+
+
+
+
 <img src="/posts/assets/44fmp1-Pasted-image-20260501100005.png" alt="Pasted image 20260501100005.png" loading="lazy" />
+
+
+
+
 **Concatenate:沿着通道Channel拼接
 对于pooling和conv都可以通过padding保证size的不变
 ##### Whats 1*1 Conv:
@@ -115,7 +123,7 @@ class Net(nn.Module):
 $w=w-\alpha*g$
 ** Deep Residual Learning:
 Residual net
-Drawing 2026-05-01 10.52.17.excalidraw
+<a href="/posts/assets/0d28f4d23ccc2d5f-Drawing-2026-05-01-10.52.17.excalidraw.md" download>手绘图源文件：Drawing 2026-05-01 10.52.17.excalidraw</a>
 $$
 \begin{align}
 z=F(x)+x\newline
@@ -126,7 +134,15 @@ $$
 **最终我们发现,即使$\frac{\partial F(x)}{\partial x}$很小我们的梯度也不为0而是1 最终无数个约为1的梯度相乘很好的解决了梯度消失的问题
 ##### Residual NetWork:(残差结构快)
 Plain Net VS Residual Net
+
+
+
+
 <img src="/posts/assets/1x7lrd9-Pasted-image-20260501110221.png" alt="Pasted image 20260501110221.png" loading="lazy" />
+
+
+
+
 ##### Implementation Of Simple Residual Network
 ```python
 class ResidualBlock(nn.Module):

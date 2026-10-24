@@ -63,4 +63,3 @@ fn ret_unit_type() {
 	let z = if x%2 ==1{"odd"}else{"even"};
 }
 ```
-## Rust by Practice

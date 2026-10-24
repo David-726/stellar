@@ -14,16 +14,40 @@ draft: false
 ## Rol Region of Interest 兴趣区域池化层
 给定一个锚框，均匀分割成n\*m块，输出每块里的最大值
 不管锚框多大，总是输出nm个值
+
+
+
+
 <img src="/posts/assets/1k4qdwe-Pasted-image-20260523222508.png" alt="Pasted image 20260523222508.png" loading="lazy" />
+
+
+
+
 ## Fast RCNN
 使用CNN对图片抽样特征
 使用ROL池化层对每个锚框生成固定长度特征
 ## Faster R-CNN
 使用一个区域提议网络来替代启发式搜索来获得更好的锚框
+
+
+
+
 <img src="/posts/assets/rcz97n-Pasted-image-20260523223215.png" alt="Pasted image 20260523223215.png" loading="lazy" />
+
+
+
+
 ## Mask R-CNN
 **如果有像素级别的标号，利用FCN来利用这些信息
+
+
+
+
 <img src="/posts/assets/1x1wbkg-Pasted-image-20260523223506.png" alt="Pasted image 20260523223506.png" loading="lazy" />
+
+
+
+
 #### Conclusion:
 - R-CNN 是最早也是最有名的一类基于锚框和CNN的目标检测算法
 - Fast/Faster R-CNN持续提升性能
@@ -38,7 +62,15 @@ draft: false
 在每段都生成锚框
 - 底部端来拟合小物体，顶部段来拟合大物体
 对每个锚框预测类别和边缘框
+
+
+
+
 <img src="/posts/assets/uez921-Pasted-image-20260523224931.png" alt="Pasted image 20260523224931.png" loading="lazy" />
+
+
+
+
 **SSD通过单神经网络来检测模型
 以每个像素为中心的产生多个锚框
 在多个段的输出上进行多尺度的检测

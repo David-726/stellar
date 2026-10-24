@@ -174,11 +174,27 @@ output2
 first_4h_to_h+second_4h_to_h == output2
 ```
 ### Attention
+
+
+
+
 <img src="/posts/assets/je5w61-Pasted-image-20260903221001.png" alt="Pasted image 20260903221001.png" loading="lazy" />
+
+
+
+
 ```python
 bert.encoder.layer[0].attention
 ```
+
+
+
+
 <img src="/posts/assets/9enr4w-Pasted-image-20260903221714.png" alt="Pasted image 20260903221714.png" loading="lazy" />
+
+
+
+
 ```python
 input = torch.randn(size=(1,5,32),dtype=torch.float32)
 ```
@@ -303,11 +319,3 @@ attn_output = attn_output1+attn_output2
 ```python
 attn_output.shape
 ```
-
-
-
-
-
-
-
-

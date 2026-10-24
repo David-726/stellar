@@ -45,7 +45,7 @@ pos_ids
 token_embed = model.embeddings.word_embeddings(input_ids)
 ```
 ```python
-model.embedding(input_ids,token_type_ids)
+model.embeddings(input_ids,token_type_ids)
 ```
 ```python
 model.embeddings(input_ids,token_type_ids)
@@ -69,7 +69,7 @@ pos_embed.shape
 ```
 ### input embedding
 ```python
-imput_embed = token_embed+seg_embed+pos_embed.unsqueeze(0)
+input_embed = token_embed+seg_embed+pos_embed.unsqueeze(0)
 ```
 ### 后处理
 ```python

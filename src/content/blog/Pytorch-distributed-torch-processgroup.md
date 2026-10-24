@@ -20,7 +20,15 @@ import torch.multiprocessing as mp
 	- Gloo Meta开源
 	- MPI
 		- 一般nccl用于gpu后端,gloo用于cpu后端,MPI需要从源码重新编译
+
+
+
+
 <img src="/posts/assets/1lvhajy-Pasted-image-20260903230436.png" alt="Pasted image 20260903230436.png" loading="lazy" />
+
+
+
+
 ### Point 2 Point Communciation
 ```python
 def run(rank,size):
@@ -37,7 +45,15 @@ def run(rank,size):
 ```
 - recv是阻塞式的，不会打印出`Rank:1,has data tensor([0.],device='cuda:1’)`的情况
 ### Collective Communciation
+
+
+
+
 <img src="/posts/assets/1rpqw0a-Pasted-image-20260905104345.png" alt="Pasted image 20260905104345.png" loading="lazy" />
+
+
+
+
 ```python
 def run(rank,size):
 	group = dist.new_group([0,1])

@@ -10,6 +10,9 @@ export default defineConfig({
   trailingSlash: "always",
   integrations: [sitemap()],
   markdown: {
+    shikiConfig: {
+      langAlias: { Verilog: "verilog", pythpon: "python", "伪代码的实现": "text" },
+    },
     remarkPlugins: [remarkMath],
     rehypePlugins: [rehypeKatex],
   },

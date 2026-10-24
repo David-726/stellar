@@ -10,7 +10,15 @@ draft: false
 
 tersor:[batches,channels,height,width]
 NiN的想法是再每个像素位置应用1个全连接层，若是将权重连接到每个空间位置，可以视之为1\*1卷积层，或者作为在每个像素位置上独立作用的全连接层
-<img src="/posts/assets/78adsd-nin.svg" alt="nin.svg" loading="lazy" />以一个卷积层开始，后面两个1x1卷积层->充当含ReLU激活函数的之像素全连接层
+
+
+
+
+<img src="/posts/assets/78adsd-nin.svg" alt="nin.svg" loading="lazy" />
+
+
+
+以一个卷积层开始，后面两个1x1卷积层->充当含ReLU激活函数的之像素全连接层
 ```python
 import torch
 from torch import nn

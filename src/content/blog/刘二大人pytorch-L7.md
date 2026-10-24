@@ -84,7 +84,9 @@ w_{1}\\
 w_{8}
 \end{bmatrix}
 \end{align}
- $$**So we get:
+ $$
+
+**So we get:
  $$
  \begin{bmatrix}
  z^{(1)}\\
@@ -133,7 +135,15 @@ model = Model()
 - 读文档，基本架构理念 **(泛化能力比较好)
 
 #### Example:Artifical Netural Network
+
+
+
+
 <img src="/posts/assets/1hb0dvw-Pasted-image-20260426104454.png" alt="Pasted image 20260426104454.png" loading="lazy" />
+
+
+
+
 
 #### Examples:Diabetes Prediction:
 - Prepare dataset

@@ -120,5 +120,11 @@ assign p = top.u_m2.u_n4.d;
 ```
 
 
-> ⚠️ 缺失图片：Pasted image 20260818203852.png
 
+
+
+<img src="/posts/assets/7331c0d14499ffa8-verilog-module-hierarchy-runoob.png" alt="模块层级示意图（菜鸟教程）" loading="lazy" />
+
+
+
+[模块层级示意图来源：菜鸟教程](https://www.runoob.com/w3cnote/verilog-generate.html)

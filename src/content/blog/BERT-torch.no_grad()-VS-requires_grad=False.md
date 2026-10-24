@@ -35,12 +35,12 @@ def calc_learnable_params(model):
 calc_learnable_params(bert)
 ```
 ```python
-with torch.nn_grad():
+with torch.no_grad():
 	print(calc_learnable_params(bert))
 ```
 ```python
 for name,param in bert.named_parameters():
-	if param.requires_grad():
+	if param.requires_grad:
 		param.requires_grad = False
 ```
 Answer:

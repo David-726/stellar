@@ -6,7 +6,15 @@ tags: ["Verilog"]
 draft: false
 ---
 # Verilog 除法器设计
-<img src="/posts/assets/3eq-Pasted-image-20260820180149.png" alt="Pasted image 20260820180149.png" loading="lazy" />除法运算的过程:
+
+
+
+
+<img src="/posts/assets/3eq-Pasted-image-20260820180149.png" alt="Pasted image 20260820180149.png" loading="lazy" />
+
+
+
+除法运算的过程:
 - 被除数的高级位数据，位宽和除数相同(实例中是3bit数据)
 - 被除数高位数据与除数作比较，若前者不小于后者，则可得到对应位的商为1，二者做差得到第一步的余数，肉则直接得到余数
 - 上一步中的余数与被除数剩余最高位1bit数据拼接成新的数据，然后再和除数做比较，可以得到新的商和余数

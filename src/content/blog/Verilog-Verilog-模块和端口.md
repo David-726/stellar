@@ -13,7 +13,15 @@ module module_name
 	Declarations_and_Statements;
 endmodule
 ```
+
+
+
+
 <img src="/posts/assets/2hw56-Pasted-image-20260818193351.png" alt="Pasted image 20260818193351.png" loading="lazy" />
+
+
+
+
 ## 端口
 是模块与外界交互的端口，模块内部不可见，对模块的调用通过端口连接进行
 ### 端口列表

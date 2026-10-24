@@ -19,7 +19,15 @@ draft: false
 - 同步过程，不需要等待所有的卡都计算完一轮梯度
 - 经过这个同步过程之后，所有的卡的models/optimizer 就会保持一致的状态
 - Parameter server distributed over all Gpus
+
+
+
+
 <img src="/posts/assets/1qwj4vg-Pasted-image-20260901153524.png" alt="Pasted image 20260901153524.png" loading="lazy" />
+
+
+
+
 - 计算和同步的几个过程：
 	- GPus 分别计算损失和梯度
 	- 梯度的聚合

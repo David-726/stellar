@@ -92,7 +92,15 @@ $$
 $$
 - Design Model
 **自动构造计算图**
+
+
+
+
 <img src="/posts/assets/18mh3lv-Pasted-image-20260419230428.png" alt="Pasted image 20260419230428.png" loading="lazy" />
+
+
+
+
 **我们需要x和y的维度**
 ```python
 class LinearModel(torch.nn.Module):

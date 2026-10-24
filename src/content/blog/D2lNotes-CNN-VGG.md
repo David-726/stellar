@@ -28,7 +28,15 @@ def vgg_block(num_convs,in_channels,out_channels):
 
 ### VGG网络
 VGG网络可以分为两部分:第一部分由卷积层和池化层组成，第二部分由全连接层组成。
-<img src="/posts/assets/ay3843-vgg.svg" alt="vgg.svg" loading="lazy" />VGG神经网络连接几个VGG块，其中有超参数`conv_arch`,改变了指定了卷积层个数二号输出通道
+
+
+
+
+<img src="/posts/assets/ay3843-vgg.svg" alt="vgg.svg" loading="lazy" />
+
+
+
+VGG神经网络连接几个VGG块，其中有超参数`conv_arch`,改变了指定了卷积层个数二号输出通道
 原始VGG网络有5个卷积块，其中前2个块各有1个卷积层，后3个块包含2个卷积层。
 改网络采用8个卷积层和3个全连接层，因此被称之为VGG-11
 ```python

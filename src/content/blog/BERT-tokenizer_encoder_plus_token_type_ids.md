@@ -10,7 +10,7 @@ draft: false
 from transformers import BertTokenizer
 ```
 ```python
-model_names = 'ber-base-uncased'
+model_names = 'bert-base-uncased'
 ```
 ```python
 tokenizer = BertTokenizer.from_pretrained(model_name)
@@ -46,7 +46,7 @@ tokenizer.decode(...)
 from sklearn.datasets import fetch_20newsgroups
 ```
 ```python
-newsgroups_train = fetch_20newgroups(subset='train')
+newsgroups_train = fetch_20newsgroups(subset='train')
 ```
 ```python
 newsgroups_train.DESCR
